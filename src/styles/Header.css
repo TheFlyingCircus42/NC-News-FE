@@ -1,0 +1,26 @@
+.Header{
+    border: solid 2px rgb(8, 0, 255);
+    
+}
+
+.Header-Logo{
+    display: inline
+}
+
+.Header-Title{
+    display: inline;
+    margin: 5px;
+}
+
+/* .Header-UserBox{
+    display: inline
+} */
+
+.Header-UserBox-Avtr{
+    display: inline;
+    margin: 5px;
+}
+
+.Header-UserBox-User{
+    display: inline;
+}
