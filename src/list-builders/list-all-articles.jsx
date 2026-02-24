@@ -1,13 +1,16 @@
-// import fetchAllArticles from "../api-fetchers/fetchAllArticles";
 
 
-// function ArticlesList ()
-// {
-// const articlesObj = fetchAllArticles()
+import ArticleCard from '../components/ArticleCard'
 
-// }
+function ListAllArticles ({ articles})
+{
+    return(
+        <div className="articles-grid">
+            {articles.map((article) => (
+                <ArticleCard key={article.article_id} article={article}/>
+            ))}
+        </div>
+    )
+}
 
-
-// function filmListBuilder(apiResult) {
-//   return apiResult.map((item) => {
-//     return {
+export default ListAllArticles
