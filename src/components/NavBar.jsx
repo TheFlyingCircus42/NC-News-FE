@@ -1,5 +1,5 @@
 import '../styles/NavBar.css'
-<styles />
+
 import { useState , useEffect } from 'react'
 
 function NavBar () {
