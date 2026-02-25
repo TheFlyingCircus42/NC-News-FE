@@ -1,10 +1,15 @@
-.Nav-AllTopics{
+.Nav-Bar{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Nav-Bar-Link{
     display: inline;
     margin: 5px;
     padding: 5px; 
 }
 
-.Nav-AllArticles{
+/* .Nav-AllArticles{
     display: inline;
     margin: 5px;
     padding: 5px;
@@ -20,4 +25,4 @@
     display: inline;
     margin: 5px;
     padding: 5px;
-}
+} */
