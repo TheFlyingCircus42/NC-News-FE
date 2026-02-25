@@ -13,4 +13,6 @@ async function fetchAllArticles () {
     
 }
 
+console.log("fetchallarticles.js", fetchAllArticles())
+
 export default fetchAllArticles

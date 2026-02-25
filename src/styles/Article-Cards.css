@@ -10,6 +10,14 @@
 
 }
 
+.article-card-topic{
+    border: solid 1px black;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 8px;
+}
+
+
 .article-card-title{
     border: solid 1px black;
     display: flex;
