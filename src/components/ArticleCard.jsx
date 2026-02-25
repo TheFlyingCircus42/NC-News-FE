@@ -1,5 +1,7 @@
 /// ARTICLE PREVIEW CARD COMPONENT --> ArticleCard.jsx
 
+import '../styles/Article-Cards.css'
+
 function ArticleCard ({ article })
 {
     return(
