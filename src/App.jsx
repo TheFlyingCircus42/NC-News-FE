@@ -3,7 +3,7 @@ import './App.css'
 import Header from './components/Header'
 import NavBar from './components/NavBar'
 import AllArticles from './components/AllArticles'
-
+import '../src/styles/Article-Cards.css'
 
 
 
