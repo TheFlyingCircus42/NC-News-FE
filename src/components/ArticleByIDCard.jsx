@@ -18,10 +18,10 @@ function ArticleByIDCard ({article})
 
         <div className="article-card-footer">
 
-            <p className="article-card-footer-content"> By {article.author} | Comments: {article.comment_count} | Votes: {article.votes} </p>
+            <p className="article-card-footer-content"> By {article.author} | {new Date(article.created_at).toLocaleDateString()} | Comments: {article.comment_count} | Votes: {article.votes} </p>
         </div>
         
-      
+   
     </div>)
 
 }
