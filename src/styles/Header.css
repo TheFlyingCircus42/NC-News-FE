@@ -1,5 +1,7 @@
 .Header{
     border: solid 2px rgb(8, 0, 255);
+    display: flex;
+    justify-content: space-evenly;
     
 }
 
@@ -12,15 +14,24 @@
     margin: 5px;
 }
 
-/* .Header-UserBox{
-    display: inline
-} */
+.Header-UserBox{
+    display: flex;
+} 
 
 .Header-UserBox-Avtr{
-    display: inline;
+    display: flex;
     margin: 5px;
 }
 
 .Header-UserBox-User{
-    display: inline;
+    display: flex;
+}
+
+.Header-UserBox-Avtr{
+    display: flex;
+
+}
+
+.Header-UserBox-Use{
+    display: flex;
 }

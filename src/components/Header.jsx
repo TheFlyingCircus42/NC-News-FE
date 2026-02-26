@@ -9,10 +9,10 @@ function Header ()
     
     <p className="Header-Logo">Logo</p>    
     <h1 className="Header-Title">HEADER TITLE</h1>
-    {/* <div className="Header-UserBox"> */}
+    <div className="Header-UserBox">
         <p className="Header-UserBox-Avtr">Avatar</p>
         <p className="Header-UserBox-User">username</p>
-    {/* </div> */}
+    </div>
     </header>
     
     
