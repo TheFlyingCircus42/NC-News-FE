@@ -77,9 +77,17 @@
     margin: 6px;
 }
 
-.vote-btn{
+.vote-minus-btn{
     border: solid 1px black;
     border-radius: 4px;
     margin: 6px;
     padding: 4px 8px;
 }
+
+.vote-plus-btn{
+border: solid 1px black;
+    border-radius: 4px;
+    margin: 6px;
+    padding: 4px 8px;
+}
+

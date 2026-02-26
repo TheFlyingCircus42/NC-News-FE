@@ -1,6 +1,7 @@
 import '../styles/Article-Cards.css' /// MAKE OWN CSS FILE
 import './Display-Vote-Box'
 import VoterBox from './Display-Vote-Box'
+import CommentForm from './Comment-Form'
 
 
 function ArticleByIDCard ({article})
@@ -18,18 +19,17 @@ function ArticleByIDCard ({article})
             <p className="article-card-text">{article.body}</p>
         </div>
 
-        <VoterBox article={article}></VoterBox>
-
-
-        {/* <div className="article-voter-box">
-            <button className="vote-btn" type="button">  - VOTE  </button>
-            <p> | Votes: {article.votes} | </p>
-            <button className="vote-btn" type="button">  + VOTE  </button>
-        </div> */}
-
         <div className="article-card-footer">  
             <p className="article-card-footer-content"> By {article.author} | {new Date(article.created_at).toLocaleDateString()} | Comments: {article.comment_count}  </p>
         </div>
+
+        <VoterBox article={article}></VoterBox>
+        {/* <AddComment article={article}></AddComment> */}
+        <CommentForm article={article}></CommentForm>
+
+
+
+
    
     </div>)
 

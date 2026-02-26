@@ -31,8 +31,10 @@ function ArticleByID ()
         if (error) return <p>{error}</p>
 
         return(<>
+
         <ListArticleByID article={article}/>
-        <CommentsByArticleID/>
+        <CommentsByArticleID article={article}/>
+        
         </>)       
 }
 

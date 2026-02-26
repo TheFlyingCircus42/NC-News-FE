@@ -1,0 +1,28 @@
+.comment-box-container{
+    border: solid 1px black;
+    border-radius: 8px;
+    /* display: flex; */
+}
+
+.comment-box-header{
+  display: flex;  
+  justify-content: center;
+}
+.comment-box-header p{
+    padding: 6px;
+    margin: 6px;
+}
+
+.cmnt-form-close-btn{
+     padding: 4px;
+     padding-top: 2px;
+     margin: 12px;
+     
+}
+
+.comment-form{}
+
+.cmnt-form-post-btn{
+    padding: 4px;
+    margin: 6px;
+}
