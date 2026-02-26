@@ -1,0 +1,30 @@
+.comment-card{
+    border: solid 2px black; 
+    border-radius: 10px;
+    margin: 8px;
+    /* display: flex; */
+    /* max-width: 450px ; */
+}
+
+.comment-card-top{
+display: flex;
+justify-content: flex-start;
+padding: 8px;
+}
+
+.comment-card-top p{
+margin: 8px;
+}
+
+.comment-card-content{
+
+}
+
+.comment-card-footer{
+display: flex;
+justify-content: center;
+}
+
+.comment-card-footer p{
+    margin: 12px;
+}

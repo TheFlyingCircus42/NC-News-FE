@@ -63,3 +63,16 @@
     padding: 2px;
     color: chocolate;
 }
+
+
+.article-voter-box{
+    border: solid 1px black;
+    border-radius: 8px;
+    display: flex; 
+    justify-content: space-evenly;
+    margin: 4px;
+    /* padding: 8px; */
+}
+.article-voter-box p{
+    margin: 6px;
+}

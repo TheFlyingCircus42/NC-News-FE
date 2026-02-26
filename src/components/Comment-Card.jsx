@@ -1,3 +1,6 @@
+import '../styles/Comment-Card.css'
+<styles />
+
 
 function CommentCard ({comment}) 
 {return(
@@ -18,6 +21,9 @@ function CommentCard ({comment})
         <div className="comment-card-footer">
             <p> | PATCH | </p>
             <p> | DELETE | </p>
+            <p>       </p>
+            <p> |  + VOTE  | </p>
+            <p> |  - VOTE  | </p>
         </div>
 
 

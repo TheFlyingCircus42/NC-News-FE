@@ -1,7 +1,9 @@
 .Header{
-    border: solid 2px rgb(8, 0, 255);
+    border: solid 2px rgb(2, 2, 7);
     display: flex;
     justify-content: space-evenly;
+    border-radius: 12px;
+    margin: 8px; 
     
 }
 

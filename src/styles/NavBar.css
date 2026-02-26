@@ -1,14 +1,17 @@
 .Nav-Bar{
+      border: solid 2px rgb(2, 2, 7);
     display: flex;
     justify-content: space-evenly;
-}
+    border-radius: 8px;
+    margin: 8px;}
 
 .Nav-Bar-Link{
     display: inline;
-    margin: 5px;
-    padding: 5px; 
+    margin: 15px;
+    padding: 15px; 
 }
 
+Nav-Bar-Link
 /* .Nav-AllArticles{
     display: inline;
     margin: 5px;
