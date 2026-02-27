@@ -12,6 +12,7 @@ import TopicsAllTopics from './components/Topics-All-Topics'
 import TopicsCoding from './components/Topics-Coding'
 import TopicsFootball from './components/Topics-Football'
 import TopicsCooking from './components/Topics-Cooking'
+import Footer from './components/Footer'
 
 // import ArticleAndComments from './components/Article-n-Comments'
 
@@ -43,7 +44,8 @@ function App() {
         {/* <Route path="/api/test" element={ <CommentsByArticleID/>} /> */}
 
       </Routes>
-
+      
+    <Footer></Footer>
 
 
    <p>(hello from app jsx) </p>

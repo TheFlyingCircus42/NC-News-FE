@@ -11,7 +11,7 @@
 }
 
 .article-card-topic{
-    border: solid 1px black;
+    /* border: solid 1px black; */
     display: flex;
     justify-content: space-evenly;
     border-radius: 8px;
@@ -19,7 +19,7 @@
 
 
 .article-card-title{
-    border: solid 1px black;
+    /* border: solid 1px black; */
     display: flex;
     justify-content: space-evenly;
     border-radius: 8px;
@@ -27,7 +27,7 @@
 }
 
 .article-card-content{
-    border: solid 1px black;
+    /* border: solid 1px black; */
     display: flex;
     padding: 8px;
     border-radius: 8px;
@@ -41,7 +41,7 @@
 }
 
 .article-card-text{
-    color: blue;
+    /* color: blue; */
     display: flex;
     justify-content: flex-start;
     margin: 8px; 
@@ -50,7 +50,7 @@
 }
 
 .article-card-footer{
-    border: solid 1px black;
+    /* border: solid 1px black; */
     display: flex;
     justify-content: space-evenly;
     border-radius: 8px;
