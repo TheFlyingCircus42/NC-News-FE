@@ -25,7 +25,7 @@ function CommentForm ({article})
             {
                
                 const newComment = await postComment(article.article_id, userComment, currentUser)
-                // onCommentPosted(newComment)
+                setUserComment("")
             }
                 catch (err)
                 {
