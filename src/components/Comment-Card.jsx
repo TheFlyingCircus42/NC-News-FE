@@ -13,6 +13,7 @@ function CommentCard ({comment})
     const currentUser = "tickle122" /// HC USER
     const currCmntID = comment.comment_id
     const cmntAuthor = comment.author
+    const userIsAuthor = (comment.author === currentUser)
     
 
     if(cmntDeleted) return null
@@ -61,10 +62,10 @@ function CommentCard ({comment})
 
         <div className="comment-card-footer">
             
-            <button className="cmnt-card-dlt-btn" type="button" onClick={()=>handleDelete(currCmntID , cmntAuthor , currentUser)}> | DELETE | </button>
-
-            <p> | PATCH | </p>
-            <p>       </p>
+            {userIsAuthor && <button className="cmnt-card-dlt-btn" type="button" onClick={()=>handleDelete(currCmntID , cmntAuthor , currentUser)}> | DELETE | </button>}
+            {userIsAuthor && <p> | PATCH | </p>}
+            {userIsAuthor && <p>       </p>}
+                   
             <p> |  + VOTE  | </p>
             <p> |  - VOTE  | </p>
         </div>
