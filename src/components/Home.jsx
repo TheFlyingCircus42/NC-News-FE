@@ -2,7 +2,7 @@ import '../styles/Home.css'
 
 function Home ()
 {return(<>
-    <h2> Hello From Home Page</h2>
+    <h2> WELCOME HOME!</h2>
 
 
 </>)}

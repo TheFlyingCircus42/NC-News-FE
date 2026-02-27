@@ -1,13 +1,17 @@
 /// ARTICLE PREVIEW CARD COMPONENT --> ArticleCard.jsx
 
 import '../styles/Article-Cards.css'
+import { Link } from 'react-router-dom'
 
 function ArticleCard ({ article })
 {
+    const id = article.article_id
+
     return(
     <div className="article-card">
         
-        <h3 className="article-card-title">{article.title}</h3>
+        {/* <h3 className="article-card-title">{article.title}</h3> */}
+        <Link to={`/api/articles/${id}`}><h3 className="article-card-title">{article.title}</h3></Link>
 
         <div className="article-card-content">
 

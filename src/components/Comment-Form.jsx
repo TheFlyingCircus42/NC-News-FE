@@ -26,6 +26,7 @@ function CommentForm ({article})
                
                 const newComment = await postComment(article.article_id, userComment, currentUser)
                 setUserComment("")
+                alert("Your comment has been posted succesfully! - Press refresh to see it!")
             }
                 catch (err)
                 {

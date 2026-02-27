@@ -22,7 +22,7 @@ function NavBar () {
         {/* <Link to="/api/topics">
         <p className="Nav-Bar-Link"> All Topics </p>
         </Link> */}
-        <button onClick={()=> dropMenu()}>All Topics</button>
+        <button onClick={()=> dropMenu()}>Topics</button>
 
         <Link to="/api/articles">
         <p className="Nav-Bar-Link"> All Articles </p>
@@ -34,12 +34,12 @@ function NavBar () {
     </div>
             
 
-            {showTopics && 
+        {showTopics && 
         <div className='Nav-Bar-Topics-Drop'>
+            <Link to="/topics/alltopics">All Topics</Link>
             <Link to="/topics/coding">Coding</Link>
             <Link to="/topics/football">Football</Link>
-            <Link to="topics/cooking">cooking</Link>
-            
+            <Link to="topics/cooking">Cooking</Link>  
         </div> }
     
         

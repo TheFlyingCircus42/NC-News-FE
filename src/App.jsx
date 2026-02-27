@@ -8,6 +8,10 @@ import Home from './components/Home'
 import ArticleByID from './components/ArticleByID'
 import { Routes, Route } from "react-router-dom";
 import CommentsByArticleID from './components/Comments-For-Article'
+import TopicsAllTopics from './components/Topics-All-Topics'
+import TopicsCoding from './components/Topics-Coding'
+import TopicsFootball from './components/Topics-Football'
+import TopicsCooking from './components/Topics-Cooking'
 
 // import ArticleAndComments from './components/Article-n-Comments'
 
@@ -27,8 +31,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/api/articles" element={<AllArticles />} />
-        <Route path="/api/articles/:id" element={ <ArticleByID /> } />
+        <Route path="/api/articles" element={<AllArticles/>} />
+        <Route path="/api/articles/:id" element={ <ArticleByID/> } />
+        
+        <Route path="topics/alltopics" element= { <TopicsAllTopics/> } />
+        <Route path="topics/coding" element= { <TopicsCoding/> } />
+        <Route path="topics/football" element={ <TopicsFootball/> } />
+        <Route path="topics/cooking" element={ <TopicsCooking/>} />
+
         {/* <Route path="/api/articles/:id" element={< ArticleAndComments />} /> */}
         {/* <Route path="/api/test" element={ <CommentsByArticleID/>} /> */}
 
@@ -36,7 +46,7 @@ function App() {
 
 
 
-   <h2>hello from app </h2>
+   <p>(hello from app jsx) </p>
     
     </>
   )
