@@ -31,6 +31,7 @@ function CommentCard ({comment})
                 {
                     await deleteCommentById(comment_id)
                     setCmntDeleted(true)
+                    alert("Your comment has been deleted!")
                 }            
                 catch (err) 
                 {
