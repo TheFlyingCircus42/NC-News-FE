@@ -14,42 +14,28 @@ import TopicsFootball from './components/Topics-Football'
 import TopicsCooking from './components/Topics-Cooking'
 import Footer from './components/Footer'
 
-// import ArticleAndComments from './components/Article-n-Comments'
-
 function App() {
-
 
   return (
     <>
 
     <Header></Header>
+
     <NavBar></NavBar>
-
-
-    {/* <AllArticles></AllArticles> */}
-    {/* <ArticlePreviewCard></ArticlePreviewCard> */}
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/api/articles" element={<AllArticles/>} />
-        <Route path="/api/articles/:id" element={ <ArticleByID/> } />
-        
+        <Route path="/api/articles/:id" element={ <ArticleByID/> } />        
         <Route path="topics/alltopics" element= { <TopicsAllTopics/> } />
         <Route path="topics/coding" element= { <TopicsCoding/> } />
         <Route path="topics/football" element={ <TopicsFootball/> } />
         <Route path="topics/cooking" element={ <TopicsCooking/>} />
-
-        {/* <Route path="/api/articles/:id" element={< ArticleAndComments />} /> */}
-        {/* <Route path="/api/test" element={ <CommentsByArticleID/>} /> */}
-
       </Routes>
       
     <Footer></Footer>
-
-
-   <p>(hello from app jsx) </p>
-    
+   
     </>
   )
 }
