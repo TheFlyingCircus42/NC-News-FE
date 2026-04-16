@@ -1,13 +1,17 @@
 /* *{
   border: solid red 1px;
 } */
-
- #root {
+.app-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+ /* #root {
   max-width: 600px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
+} */
 /* 
 .logo {
   height: 6em;
