@@ -17,7 +17,7 @@ import Footer from './components/Footer'
 function App() {
 
   return (
-    <>
+    <div className='app-container'>
 
     <Header></Header>
 
@@ -36,7 +36,7 @@ function App() {
       
     <Footer></Footer>
    
-    </>
+    </div>
   )
 }
 export default App 
