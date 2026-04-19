@@ -3,7 +3,7 @@ import './App.css'
 import Header from './components/Header'
 import NavBar from './components/NavBar'
 import AllArticles from './components/AllArticles'
-import '../src/styles/Article-Cards.css'
+import './styles/Article-Cards.css'
 import Home from './components/Home'
 import ArticleByID from './components/ArticleByID'
 import { Routes, Route } from "react-router-dom";
@@ -17,7 +17,7 @@ import Footer from './components/Footer'
 function App() {
 
   return (
-    <>
+    <div className='app-container'>
 
     <Header></Header>
 
@@ -36,7 +36,7 @@ function App() {
       
     <Footer></Footer>
    
-    </>
+    </div>
   )
 }
 export default App 

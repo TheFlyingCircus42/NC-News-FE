@@ -1,93 +1,77 @@
-
-
-
-.article-card{
+/* .article-card{
     border: solid 2px black;
-    /* display: flex; */
     border-radius: 8px;
     margin: 8px;
     width:auto
+} */
 
-}
-
-.article-card-topic{
-    /* border: solid 1px black; */
+/* .article-card-topic{
     display: flex;
     justify-content: space-evenly;
     border-radius: 8px;
-}
+} */
 
-
-.article-card-title{
-    /* border: solid 1px black; */
+/* .article-card-title{
     display: flex;
     justify-content: space-evenly;
-    border-radius: 8px;
-    
-}
+    border-radius: 8px;    
+} */
 
-.article-card-content{
-    /* border: solid 1px black; */
+/* .article-card-content{
     display: flex;
     padding: 8px;
     border-radius: 8px;
-}
+} */
 
-.article-card-img{
+/* .article-card-img{
     height: 100px;
     width: auto;
     margin: 8px; 
     border-radius: 8px;
-}
+} */
 
-.article-card-text{
-    /* color: blue; */
+/* .article-card-text{
     display: flex;
     justify-content: flex-start;
     margin: 8px; 
     border-radius: 8px;
-    
-}
+} */
 
-.article-card-footer{
-    /* border: solid 1px black; */
+/* .article-card-footer{
     display: flex;
     justify-content: space-evenly;
     border-radius: 8px;
-    /* margin: 2px;
-    padding: 2px; */
-}
+} */
 
-.article-card-footer-content{
+/* .article-card-footer-content{
     margin: 2px;
     padding: 2px;
     color: chocolate;
-}
+} */
 
-
-.article-voter-box{
+/* .article-voter-box{
     border: solid 1px black;
     border-radius: 8px;
     display: flex; 
     justify-content: space-evenly;
     margin: 4px;
-    /* padding: 8px; */
-}
-.article-voter-box p{
-    margin: 6px;
-}
+} */
 
-.vote-minus-btn{
+/* .article-voter-box p{
+    margin: 6px;
+} */
+
+/* .vote-minus-btn{
     border: solid 1px black;
     border-radius: 4px;
     margin: 6px;
     padding: 4px 8px;
-}
+} */
 
-.vote-plus-btn{
+/* .vote-plus-btn{
 border: solid 1px black;
     border-radius: 4px;
     margin: 6px;
     padding: 4px 8px;
-}
+} */
 

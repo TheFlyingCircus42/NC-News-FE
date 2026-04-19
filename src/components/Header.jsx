@@ -1,5 +1,4 @@
 import '../styles/Header.css'
-<styles />
 
 
 function Header () 

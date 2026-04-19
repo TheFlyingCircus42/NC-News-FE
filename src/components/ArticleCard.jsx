@@ -10,7 +10,6 @@ function ArticleCard ({ article })
     return(
     <div className="article-card">
         
-        {/* <h3 className="article-card-title">{article.title}</h3> */}
         <Link to={`/api/articles/${id}`}><h3 className="article-card-title">{article.title}</h3></Link>
 
         <div className="article-card-content">
