@@ -10,15 +10,15 @@ function NavBar () {
     function dropMenu (){
         setShowTopics(!showTopics)
     }
+
+    <Link to="/home" className="nav-link">Home</Link>
     
     return(<>
     <nav className="Nav-Bar">
         
     <div className='Nav-Bar-Links'>
-        <Link to="/home">
-        <p className="Nav-Bar-Link"> Home </p>
-        </Link>
-
+        <Link to="/home" className='nav-link'> Home! </Link>
+              
 
         <button onClick={()=> dropMenu()}>Topics</button>
 
