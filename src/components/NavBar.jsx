@@ -19,9 +19,7 @@ function NavBar () {
         <p className="Nav-Bar-Link"> Home </p>
         </Link>
 
-        {/* <Link to="/api/topics">
-        <p className="Nav-Bar-Link"> All Topics </p>
-        </Link> */}
+
         <button onClick={()=> dropMenu()}>Topics</button>
 
         <Link to="/api/articles">
