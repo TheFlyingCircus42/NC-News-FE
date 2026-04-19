@@ -10,21 +10,19 @@ function NavBar () {
     function dropMenu (){
         setShowTopics(!showTopics)
     }
-
-    <Link to="/home" className="nav-link">Home</Link>
     
     return(<>
     <nav className="Nav-Bar">
         
     <div className='Nav-Bar-Links'>
-        <Link to="/home" className='nav-link'> Home! </Link>
+        <Link to="/home" className='nav-link'> Home </Link>
               
 
         <button onClick={()=> dropMenu()}>Topics</button>
 
-        <Link to="/api/articles">
-        <p className="Nav-Bar-Link"> All Articles </p>
-        </Link>
+        <Link to="/api/articles" className='nav-link'> All Articles </Link>
+    
+        
 
         <Link to="/api">
         <p className="Nav-Bar-Link"> API Info </p>
