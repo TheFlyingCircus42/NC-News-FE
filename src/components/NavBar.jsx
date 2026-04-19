@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 function NavBar () {
     
-    const [showTopics , setShowTopics]=useState("false")
+    const [showTopics , setShowTopics]=useState(false)
 
     
     function dropMenu ()
