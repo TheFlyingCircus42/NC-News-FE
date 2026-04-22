@@ -36,7 +36,8 @@ function ArticleCard ({ article })
         </Link>
 
         <p className='article-meta'>
-            {topic} - {date}
+            <span className='article-topic-badge'> {topic} </span> 
+            <span>{date}</span>
         </p>
 
         <div className="article-card-content">
