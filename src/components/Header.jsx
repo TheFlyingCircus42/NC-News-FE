@@ -18,9 +18,16 @@ function Header ()
     </Link>
 
     <div className="Header-UserBox">
-        <p className="Header-UserBox-Avtr">Avatar</p>
-        <p className="Header-UserBox-User">username</p>
-    </div>
+        {/* <p className="Header-UserBox-Avtr">Avatar</p>
+         */}
+        <img src="https://i.pravatar.cc/40"
+        alt="User Avatar"
+        className='User-Avatar' />       
+
+        <span className='User-name'> Username </span>
+        <span className='User-Chevron'> ▾ </span>
+
+        </div>
     </header>
     
     

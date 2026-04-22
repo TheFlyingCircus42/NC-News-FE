@@ -24,6 +24,7 @@
         color: inherit;
     }
 
+
 .Header-Logo 
     {
         height: 45px;
@@ -51,4 +52,12 @@
         padding: 0.3rem 0.7rem;
         background: #f3f4f6;
         border-radius: 999px;
+    }
+
+.User-Avatar
+    {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        object-fit: cover;
     }
