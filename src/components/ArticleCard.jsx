@@ -29,6 +29,8 @@ function ArticleCard ({ article })
             }) : "";
 
     return(
+
+    <Link to={`articles/${article_id}`} className='article-card-link'>
     <div className="article-card">
         
         <Link to={`/articles/${article_id}`} className='article-link'>
@@ -55,7 +57,8 @@ function ArticleCard ({ article })
             </div>
         </div>
         
-    </div>);
+    </div>
+    </Link>);
 }
 
 export default ArticleCard
