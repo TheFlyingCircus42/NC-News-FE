@@ -33,9 +33,9 @@ function ArticleCard ({ article })
     <Link to={`/articles/${article_id}`} className='article-card-link'>
     <div className="article-card">
         
-        <Link to={`/articles/${article_id}`} className='article-link'>
+        <div className='article-link'>
             <h3 className="article-card-title">{title}</h3>
-        </Link>
+        </div>
 
         <p className='article-meta'>
             <span className='article-topic-badge'> {topic} </span> 
