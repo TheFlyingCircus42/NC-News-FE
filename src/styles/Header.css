@@ -8,6 +8,12 @@
         border-bottom: 1px solid #e5e7eb;
 }
 
+.Header-Logo 
+    {
+        height: 60px;
+        width: auto;
+    }
+
 .Header-Title 
     {
         font-size: 1.8rem;
