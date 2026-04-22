@@ -50,11 +50,15 @@ function ArticleCard ({ article })
         </div>
 
         <div className="article-card-footer">
-            <div className="article-card-footer-content"> 
-                <span className='meta-item'> 👤 By {author || "unkown"} </span>
-                <span className='meta-item'> 💬 {comment_count ?? 0} </span>
-                <span className='meta-item'> 👍 Votes: {votes ?? 0} </span>
-            </div>
+
+                <span className='footer-left'>
+                    <span className='meta-item'>  👤 By {author || "unkown"}  </span>
+                </span>
+                
+                <span className='footer-right'>
+                    <span className='meta-item'>  💬 {comment_count ?? 0}  </span>
+                    <span className='meta-item'>  ⬆️ {votes ?? 0}  </span>
+                </span>
         </div>
         
     </div>
