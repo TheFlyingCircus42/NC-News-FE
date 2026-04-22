@@ -31,29 +31,30 @@ function ArticleCard ({ article })
     return(
     <div className="article-card">
         
-        <Link to={`/articles/${article_id}`}><h3 className="article-card-title">{title}</h3></Link>
+        <Link to={`/articles/${article_id}`} className='article-link'>
+            <h3 className="article-card-title">{title}</h3>
+        </Link>
+
+        <p className='article-meta'>
+            {topic} - {date}
+        </p>
 
         <div className="article-card-content">
-            
             {article_img_url && (
-            <img className="article-card-img" 
+                <img className="article-card-img" 
                 src = {article_img_url} 
-                alt={title}/>
-            )}
-
+                alt={title}/>)}
         </div>
 
         <div className="article-card-footer">
-
-            <p className="article-card-footer-content"> 
-                By {author || "unkown"} | Comments: {comment_count ?? 0} | Votes: {votes ?? 0} 
-            </p>
-
+            <div className="article-card-footer-content"> 
+                <span> By {author || "unkown"} </span>
+                <span> Comments: {comment_count ?? 0} </span>
+                <span> Votes: {votes ?? 0} </span>
+            </div>
         </div>
         
-      
-    </div>)
-
+    </div>);
 }
 
 export default ArticleCard
