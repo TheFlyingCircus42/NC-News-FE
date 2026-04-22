@@ -18,7 +18,7 @@ function NavBar () {
         
             <div className='Nav-Bar-Links'>
                 <Link to="/home" className='nav-link'> Home </Link>           
-                <Link to="/api/articles" className='nav-link'> All Articles </Link>      
+                <Link to="/articles" className='nav-link'> All Articles </Link>      
                 <Link to="/api" className='nav-link'> API </Link>
                 <button onClick={()=> dropMenu()}>Topics</button>
             </div>
