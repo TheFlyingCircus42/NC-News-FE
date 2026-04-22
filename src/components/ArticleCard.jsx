@@ -20,6 +20,13 @@ function ArticleCard ({ article })
         votes
     } = article;
 
+    const date = created_at
+        ? new Date(created_at).toLocaleDateString("en-GB", 
+            {
+                day: "numeric",
+                month: "short",
+                year: "numeric"
+            }) : "";
 
     return(
     <div className="article-card">
