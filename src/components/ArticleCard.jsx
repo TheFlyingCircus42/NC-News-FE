@@ -30,7 +30,7 @@ function ArticleCard ({ article })
 
     return(
 
-    <Link to={`articles/${article_id}`} className='article-card-link'>
+    <Link to={`/articles/${article_id}`} className='article-card-link'>
     <div className="article-card">
         
         <Link to={`/articles/${article_id}`} className='article-link'>
