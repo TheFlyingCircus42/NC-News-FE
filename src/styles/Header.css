@@ -24,9 +24,14 @@
 .Header-Title 
     {
         font-size: 1.8rem;
+        font-weight: 600;
         margin: 0;
-        color: #111827;
+        /* color: #d8100d; */
+        letter-spacing: -0.02em;
     }
+.Header-Title span {
+  color: #eb2525; 
+}
 
 .Header-UserBox
     {
@@ -37,44 +42,3 @@
         background: #f3f4f6;
         border-radius: 999px;
     }
-
-
-    /* .Header{
-    border: solid 2px rgb(2, 2, 7);
-    display: flex;
-    justify-content: space-evenly;
-    border-radius: 12px;
-    margin: 8px;
-    
-}
-
-.Header-Logo{
-    display: inline
-}
-
-.Header-Title{
-    display: inline;
-    margin: 5px;
-}
-
-.Header-UserBox{
-    display: flex;
-} 
-
-.Header-UserBox-Avtr{
-    display: flex;
-    margin: 5px;
-}
-
-.Header-UserBox-User{
-    display: flex;
-}
-
-.Header-UserBox-Avtr{
-    display: flex;
-
-}
-
-.Header-UserBox-Use{
-    display: flex;
-} */
