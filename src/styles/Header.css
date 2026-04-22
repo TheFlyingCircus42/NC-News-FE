@@ -23,7 +23,7 @@
 
 .Header-Logo 
     {
-        height: 60px;
+        height: 45px;
         width: auto;
     }
 
@@ -34,6 +34,7 @@
         margin: 0;
         /* color: #d8100d; */
         letter-spacing: -0.02em;
+        line-height: 1;
     }
 .Header-Title span {
   color: #eb2525; 
