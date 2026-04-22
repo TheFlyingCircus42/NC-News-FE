@@ -8,13 +8,14 @@ function Header ()
     
     <header className="Header">
     
-    <div className='Header-left'>
 
-    <Link to="/">
+    <Link to="/" className='Header-left'>
+
+    
         <img src={logo} alt="NC News Logo" className='Header-Logo'></img>
-    </Link>
+    
     <h1 className="Header-Title">NC <span>NEWS</span></h1>
-    </div>
+    </Link>
 
     <div className="Header-UserBox">
         <p className="Header-UserBox-Avtr">Avatar</p>
