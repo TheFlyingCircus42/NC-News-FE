@@ -17,12 +17,13 @@ import Footer from './components/Footer'
 function App() {
 
   return (
-    <div className='app-container'>
-
-
+    
+    <>
     <Header></Header>
 
     <NavBar></NavBar>
+
+    <div className='app-container'>
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -38,6 +39,7 @@ function App() {
     <Footer></Footer>
    
     </div>
+    </>
   )
 }
 export default App 
