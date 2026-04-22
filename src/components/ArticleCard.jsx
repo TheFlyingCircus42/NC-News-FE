@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom'
 
 function ArticleCard ({ article })
 {
+
+    if (!article) return null; 
+    
     const id = article.article_id
 
     return(
