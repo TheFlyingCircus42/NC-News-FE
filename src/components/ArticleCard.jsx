@@ -51,9 +51,9 @@ function ArticleCard ({ article })
 
         <div className="article-card-footer">
             <div className="article-card-footer-content"> 
-                <span> By {author || "unkown"} </span>
-                <span> Comments: {comment_count ?? 0} </span>
-                <span> Votes: {votes ?? 0} </span>
+                <span className='meta-item'> 👤 By {author || "unkown"} </span>
+                <span className='meta-item'> 💬 {comment_count ?? 0} </span>
+                <span className='meta-item'> 👍 Votes: {votes ?? 0} </span>
             </div>
         </div>
         
