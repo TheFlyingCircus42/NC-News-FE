@@ -27,12 +27,11 @@ function ArticleCard ({ article })
         <Link to={`/api/articles/${article_id}`}><h3 className="article-card-title">{title}</h3></Link>
 
         <div className="article-card-content">
-
+            {article_img_url && (
             <img className="article-card-img" 
                 src = {article_img_url} 
                 alt={title}/>
-
-
+            )}
 
         </div>
 
