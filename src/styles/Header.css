@@ -15,7 +15,18 @@
         color: #111827;
     }
 
-/* .Header{
+.Header-UserBox
+    {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.3rem 0.7rem;
+        background: #f3f4f6;
+        border-radius: 999px;
+    }
+
+
+    /* .Header{
     border: solid 2px rgb(2, 2, 7);
     display: flex;
     justify-content: space-evenly;
