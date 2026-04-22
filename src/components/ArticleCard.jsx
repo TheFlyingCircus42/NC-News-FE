@@ -28,13 +28,22 @@ function ArticleCard ({ article })
 
         <div className="article-card-content">
 
-            <img className="article-card-img" src = {article_img_url} alt={title}/>
-            <p className="article-card-text">A bunch of place holder text, probably just the first few lines of the article body but I need to go into the backend to change that</p>
+            <img className="article-card-img" 
+                src = {article_img_url} 
+                alt={title}/>
+
+            <p className="article-card-text">
+                A bunch of place holder text, probably just the first few lines of the article body but I need to go into the backend to change that
+            </p>
+
         </div>
 
         <div className="article-card-footer">
 
-            <p className="article-card-footer-content"> By {author} | Comments: {comment_count} | Votes: {votes} </p>
+            <p className="article-card-footer-content"> 
+                By {author || "unkown"} | Comments: {comment_count ?? 0} | Votes: {votes ?? 0} 
+            </p>
+
         </div>
         
       
