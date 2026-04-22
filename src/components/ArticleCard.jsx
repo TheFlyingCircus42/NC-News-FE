@@ -32,9 +32,7 @@ function ArticleCard ({ article })
                 src = {article_img_url} 
                 alt={title}/>
 
-            <p className="article-card-text">
-                A bunch of place holder text, probably just the first few lines of the article body but I need to go into the backend to change that
-            </p>
+
 
         </div>
 
