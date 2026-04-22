@@ -1,22 +1,26 @@
 import '../styles/Header.css'
-
+import {Link} from "react-router-dom"
+import logo from '../assets/NCLogo.png'
 
 function Header () 
-{ return(<>
+{ return(
     
     <header className="Header">
-    
-    <p className="Header-Logo">Logo</p>    
-    <h1 className="Header-Title">NC NEWS</h1>
-    <div className="Header-UserBox">
-        <p className="Header-UserBox-Avtr">Avatar</p>
-        <p className="Header-UserBox-User">username</p>
-    </div>
-    </header>
-    
-    
-    </>)
-}
+        <Link to="/" className='Header-left'>
+            <img src={logo} alt="NC News Logo" className='Header-Logo'></img>
+            <h1 className="Header-Title">NC <span>NEWS</span></h1>
+        </Link>
 
+        <div className="Header-UserBox">
+            <img src="https://i.pravatar.cc/40"
+                alt="User Avatar"
+                className='User-Avatar' />       
+
+            <span className='User-name'> Username </span>
+            <span className='User-Chevron'> ▾ </span>
+        </div>
+    </header> 
+
+)}
 
 export default Header

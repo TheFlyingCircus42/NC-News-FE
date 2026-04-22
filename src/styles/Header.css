@@ -1,39 +1,86 @@
-/* .Header{
-    border: solid 2px rgb(2, 2, 7);
-    display: flex;
-    justify-content: space-evenly;
-    border-radius: 12px;
-    margin: 8px;
-    
+.Header 
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1.5rem;
+        background: #ffffff;
+        border-bottom: 1px solid #e5e7eb;
+        padding: 0.4rem 1.5rem;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        transition: all 0.2s ease;
+      
 }
 
-.Header-Logo{
-    display: inline
+.Header-left
+    {
+        display: flex;
+        align-items: center;
+        gap: 1.4rem;
+
+        text-decoration: none;
+        color: inherit;
+    }
+
+
+.Header-Logo 
+    {
+        height: 45px;
+        width: auto;
+    }
+
+.Header-Title 
+    {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin: 0;
+        /* color: #d8100d; */
+        letter-spacing: -0.02em;
+        line-height: 1;
+    }
+.Header-Title span {
+  color: #eb2525; 
 }
 
-.Header-Title{
-    display: inline;
-    margin: 5px;
-}
+.Header-UserBox
+    {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.3rem 0.7rem;
+        background: #f9fafb;
+        border: 1px solid #e5e7eb;
+        border-radius: 999px;
+        cursor: pointer;
+        transition: background 0.15s ease, box-shadow 0.15s ease;
+    }
+.Header-UserBox:hover 
+    {
+        background: #f3f4f6;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
 
-.Header-UserBox{
-    display: flex;
-} 
+.User-Avatar
+    {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        object-fit: cover;
 
-.Header-UserBox-Avtr{
-    display: flex;
-    margin: 5px;
-}
+        /* position: relative; */
+    }
 
-.Header-UserBox-User{
-    display: flex;
-}
+.User-Name
+    {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #111287;
+    }
 
-.Header-UserBox-Avtr{
-    display: flex;
-
-}
-
-.Header-UserBox-Use{
-    display: flex;
-} */
+.User-Chevron
+    {
+        font-size: 0.7rem;
+        color: #6b7280;
+    }
