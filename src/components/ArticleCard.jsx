@@ -21,8 +21,6 @@ function ArticleCard ({ article })
     } = article;
 
 
-    // const id = article.article_id
-
     return(
     <div className="article-card">
         
