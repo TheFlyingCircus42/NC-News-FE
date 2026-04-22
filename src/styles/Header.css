@@ -15,6 +15,13 @@
       
 }
 
+.Header-left
+    {
+        display: flex;
+        align-items: center;
+        gap: 1.4rem;
+    }
+
 .Header-Logo 
     {
         height: 60px;
