@@ -68,5 +68,19 @@
         height: 28px;
         border-radius: 50%;
         object-fit: cover;
+
+        /* position: relative; */
     }
 
+.User-Name
+    {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #111287;
+    }
+
+.User-Chevron
+    {
+        font-size: 0.7rem;
+        color: #6b7280;
+    }
