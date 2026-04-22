@@ -5,27 +5,64 @@ import { Link } from 'react-router-dom'
 
 function ArticleCard ({ article })
 {
-    const id = article.article_id
+    
+    if (!article) return null; 
+    console.log(article)
+
+    const {
+        article_id,
+        article_img_url,
+        author,
+        comment_count,
+        created_at,
+        title,
+        topic,
+        votes
+    } = article;
+
+    const date = created_at
+        ? new Date(created_at).toLocaleDateString("en-GB", 
+            {
+                day: "numeric",
+                month: "short",
+                year: "numeric"
+            }) : "";
 
     return(
+
+    <Link to={`/articles/${article_id}`} className='article-card-link'>
     <div className="article-card">
         
-        <Link to={`/api/articles/${id}`}><h3 className="article-card-title">{article.title}</h3></Link>
+        <Link to={`/articles/${article_id}`} className='article-link'>
+            <h3 className="article-card-title">{title}</h3>
+        </Link>
+
+        <p className='article-meta'>
+            <span className='article-topic-badge'> {topic} </span> 
+            <span>{date}</span>
+        </p>
 
         <div className="article-card-content">
-
-            <img className="article-card-img" src = {article.article_img_url} alt={article.title}/>
-            <p className="article-card-text">A bunch of place holder text, probably just the first few lines of the article body but I need to go into the backend to change that</p>
+            {article_img_url && (
+                <img className="article-card-img" 
+                src = {article_img_url} 
+                alt={title}/>)}
         </div>
 
         <div className="article-card-footer">
 
-            <p className="article-card-footer-content"> By {article.author} | Comments: {article.comment_count} | Votes: {article.votes} </p>
+                <span className='footer-left'>
+                    <span className='meta-item'>  👤 By {author || "unkown"}  </span>
+                </span>
+                
+                <span className='footer-right'>
+                    <span className='meta-item'>  💬 {comment_count ?? 0}  </span>
+                    <span className='meta-item'>  ⬆️ {votes ?? 0}  </span>
+                </span>
         </div>
         
-      
-    </div>)
-
+    </div>
+    </Link>);
 }
 
 export default ArticleCard

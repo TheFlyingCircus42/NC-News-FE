@@ -1,5 +1,4 @@
-
-
+import '../styles/All-Articles.css'
 import ArticleCard from '../components/ArticleCard'
 
 function ListAllArticles ({ articles})

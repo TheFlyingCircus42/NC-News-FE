@@ -1,0 +1,23 @@
+.articles-grid 
+{
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: 1fr;
+    align-items: start;
+}
+
+@media (min-width: 600px)
+{
+    .articles-grid
+    {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 900px)
+{
+    .articles-grid
+    {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

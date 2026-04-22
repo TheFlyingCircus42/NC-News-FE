@@ -19,6 +19,7 @@ function App() {
   return (
     <div className='app-container'>
 
+
     <Header></Header>
 
     <NavBar></NavBar>
@@ -26,8 +27,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/api/articles" element={<AllArticles/>} />
-        <Route path="/api/articles/:id" element={ <ArticleByID/> } />        
+        <Route path="/articles" element={<AllArticles/>} />
+        <Route path="/articles/:id" element={ <ArticleByID/> } />        
         <Route path="topics/alltopics" element= { <TopicsAllTopics/> } />
         <Route path="topics/coding" element= { <TopicsCoding/> } />
         <Route path="topics/football" element={ <TopicsFootball/> } />
