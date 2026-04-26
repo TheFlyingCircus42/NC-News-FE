@@ -6,11 +6,13 @@ import CommentForm from './Comment-Form'
 
 function ArticleByIDCard ({article})
 {
+    if (!article) return null;
+    
   return(
 
     <div className="article-card">
 
-        <h4 className="article-card-topic">{(article.topic).toUpperCase()}</h4>
+        <h4 className="article-card-topic">{(article.topic)}</h4>
         
          <h3 className="article-card-title">{article.title}</h3>
 
