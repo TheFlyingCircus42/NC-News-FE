@@ -52,6 +52,9 @@
         resize: none;
         outline: none;
         transition: border 0.15s ease;
+        min-height: 120px;
+        max-height: 300px;
+        resize: vertical;
 }
 
 .comment-textarea:focus 
