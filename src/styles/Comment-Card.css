@@ -73,6 +73,19 @@
     margin-top: 0.4rem;
   }
 
+.comment-delete-btn
+  {
+    background: none;
+    border: none;
+    color: #dc2626;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+.comment-delete-btn:hover
+  {
+    text-decoration: underline;
+  }
+
 /* OPTIMISTIC AND PESSIMISTC RENDERING FOR POST & DELET ACTIONS  */
 
 .comment-card.deleting {
