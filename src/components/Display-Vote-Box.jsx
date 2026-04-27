@@ -9,6 +9,12 @@ function VoterBox ({article})
     const [hasVoted , setHasVoted] = useState(false)
     const [error , setError] = useState(null)
 
+
+    useEffect(()=>
+        {
+            setVoteCount(article.votes)
+        } , [article.votes]) 
+
     async function handleVote(change)
     {
         if (isVoting || hasVoted) return
@@ -31,6 +37,7 @@ function VoterBox ({article})
                     setIsVoting(false)
                 }
     }
+
 
     return(
 
