@@ -51,7 +51,9 @@ function VoterBox ({article})
                 ⬆️  
             </button>
             
-            <span className="vote-count"> Votes: {voteCount} </span>
+            <span className="vote-count">
+                {voteCount} 
+            </span>
             
             <button 
                 className="vote-btn" 
