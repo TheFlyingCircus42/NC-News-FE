@@ -45,9 +45,9 @@ function ArticleByIDCard ({article})
                 {body}
             </section>
 
-            <VoterBox article={article}></VoterBox>
-            <CommentForm article={article}></CommentForm>
-            <CommentsByArticleID article={article}/>
+            {/* <VoterBox article={article}></VoterBox> */}
+            {/* <CommentForm article={article}></CommentForm> */}
+            {/* <CommentsByArticleID article={article}/> */}
 
         </article>
     )

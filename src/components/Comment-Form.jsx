@@ -3,7 +3,7 @@ import '../styles/Comment-Form.css'
 import postComment from '../api-fetchers/PostComment'
 
 
-function CommentForm ({article}) 
+function CommentForm ({article, setComments}) 
 {
     const [userComment , setUserComment] = useState("")
     const [isPosting , setIsPosting] = useState(false)
