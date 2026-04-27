@@ -1,4 +1,30 @@
-.comment-card.optimistic {
+.comment-card.optimistic
+{
   opacity: 0.6;
   border: solid 4px red;
+}
+
+.comment-card.optimistic 
+{
+  opacity: 0.6;
+  position: relative;
+}
+
+.comment-card.optimistic::after 
+{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.4),
+    transparent
+  );
+  animation: shimmer 1s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
