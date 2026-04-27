@@ -62,7 +62,6 @@ function CommentForm ({article, setComments})
                 }
     }
     
-
     return(
         <div className="comment-box-container">
             
@@ -91,7 +90,7 @@ function CommentForm ({article, setComments})
                 </button>
             </div>
 
-            {error && <p className="cmnt-post-err">{error}</p>}
+            {error && <p className="cmnt-post-err">Failed to post your comment ... please try again. </p>}
         </div>
     )
 }
