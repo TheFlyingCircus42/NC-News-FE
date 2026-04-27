@@ -59,20 +59,25 @@ function CommentCard ({comment,setComments})
                 </span>
             </div>
 
-            
-            <div className='comment-footer'>
-                <p> |  + VOTE  | </p>
-                <p>Votes: {comment.votes}</p>
-                <p> |  - VOTE  | </p>
+            <div className='comment-actions'>
+
+                {userIsAuthor && <button 
+                    className="cmnt-card-dlt-btn" 
+                    type="button" 
+                    onClick={()=>handleDelete(currCmntID , cmntAuthor , currentUser)}>
+                    {isDeleteing ? "Deleting..." : "Delete"}
+                </button>}
+
+
+                <div className='comment-votes'>
+                    <button>⬆️</button>
+                    <span>{comment.votes}</span>
+                    <button>⬇️</button>
+                </div>
+
             </div>
 
-            {userIsAuthor && <button 
-                className="cmnt-card-dlt-btn" 
-                type="button" 
-                onClick={()=>handleDelete(currCmntID , cmntAuthor , currentUser)}>
-                     | DELETE | 
-            </button>}
-           
+
             <div >
                 {isDeleteing && <p className='dlt-cmnt-err-msg'>Deleting comment</p>}
                 {error && <p className='dlt-cmnt-err-msg'>{error}</p>}
