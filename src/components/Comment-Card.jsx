@@ -36,42 +36,47 @@ function CommentCard ({comment,setComments})
                     setIsDeleting(false)
                 }
         }           
-
     }
 
     return(
-    // <div className="comment-card">
+
         <div className={`comment-card 
             ${comment.optimistic ? "optimistic" : ""}
             ${isDeleteing ? "deleting" : ""}`
             }>
-        <div className="comment-card-top">
-            <p>Image</p>
-            <p>{comment.author}</p>
-            <p>{new Date(comment.created_at).toLocaleDateString()}</p>
-            <p>Votes: {comment.votes}</p>
-            <p>CMNT ID: {comment.comment_id}</p>
+ 
+            <div className='comment-header'>
+                <div className='comment-user'>
+                    <div className='comment-avatar'> 👤 </div>
+                    <span className='comment-author'> {comment.author} </span>
+                </div>
+            </div>
 
-        </div>
+            <div className='comment-body'>
+                <p>{comment.body}</p>
+                <span className='comment-date'>
+                    {new Date(comment.created_at).toLocaleDateString()}
+                </span>
+            </div>
 
-        <div className="comment-card-content">
-            <p>{comment.body}</p>
-        </div>
-
-        <div className="comment-card-footer">
             
-            {userIsAuthor && <button className="cmnt-card-dlt-btn" type="button" onClick={()=>handleDelete(currCmntID , cmntAuthor , currentUser)}> | DELETE | </button>}
+            <div className='comment-footer'>
+                <p> |  + VOTE  | </p>
+                <p>Votes: {comment.votes}</p>
+                <p> |  - VOTE  | </p>
+            </div>
+
+            {userIsAuthor && <button 
+                className="cmnt-card-dlt-btn" 
+                type="button" 
+                onClick={()=>handleDelete(currCmntID , cmntAuthor , currentUser)}>
+                     | DELETE | 
+            </button>}
            
             <div >
                 {isDeleteing && <p className='dlt-cmnt-err-msg'>Deleting comment</p>}
                 {error && <p className='dlt-cmnt-err-msg'>{error}</p>}
             </div>
-
-            <p> |  + VOTE  | </p>
-            <p> |  - VOTE  | </p>
-        </div>
-
-
 
     </div>
 
