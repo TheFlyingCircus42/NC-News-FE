@@ -18,14 +18,37 @@
         font-size: 1.2rem;
         padding: 0.2rem;
         border-radius: 6px;
-        transition: background 0.15s ease, transform 0.1s ease;
+          transition: background 0.15s ease, transform 0.2s ease, color 0.15s ease;
     }
 
+.vote-btn.up {
+  background: #bbf7d0;
+  color: #15803d;
+  transform: scale(1.25);
+  border-radius: 999px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-.vote-btn:hover:not(:disabled)
+.vote-btn.down {
+  background: #fecaca;
+  color: #b91c1c;
+  transform: scale(1.25);
+  border-radius: 999px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .vote-btn:hover:not(:disabled)
     {
         background: rgba(0,0,0,0.06);
-    }
+    } */
 
 
 .vote-btn:disabled 

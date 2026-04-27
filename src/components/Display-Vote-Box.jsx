@@ -7,7 +7,8 @@ function VoterBox ({article})
 {
     const [voteCount , setVoteCount] = useState(article.votes)
     const [isVoting , setIsVoting] = useState(false)
-    const [hasVoted , setHasVoted] = useState(false)
+    // const [hasVoted , setHasVoted] = useState(false)
+    const [userVote, setUserVote] = useState(0)
     const [error , setError] = useState(null)
 
     useEffect(()=>
@@ -15,21 +16,24 @@ function VoterBox ({article})
             setVoteCount(article.votes)
         } , [article.votes]) 
 
-    async function handleVote(change)
+    async function handleVote(newVote)
     {
-        if (isVoting || hasVoted) return
+        if (isVoting) return
         setError(null)
         setIsVoting(true)
-        setVoteCount((currentVotes) => currentVotes + change)
+
+        const change = newVote - userVote
+        setVoteCount((curr) => curr + change)
+        setUserVote(newVote)
 
         try 
             {
                 await patchArticleVotes(article.article_id , change)
-                setHasVoted(true)
             } 
             catch (err) 
                 {
-                    setVoteCount((currentVotes)=> currentVotes - change)
+                    setVoteCount((curr)=> curr - change)
+                    setUserVote(userVote)
                     setError("Failed to make a vote. Try Again")
                 }
             finally 
@@ -43,10 +47,10 @@ function VoterBox ({article})
         <div className="vote-box">
             
             <button 
-                className={`vote-btn ${hasVoted ? "voted" : ""}`}
+                className={`vote-btn ${userVote === 1 ? "up" : ""}`}
                 type="button" 
-                disabled={isVoting || hasVoted} 
-                onClick={()=>handleVote(+1)}>
+                disabled={isVoting} 
+                onClick={()=>handleVote(userVote === 1 ? 0 : 1)}>
                 ⬆️  
             </button>
             
@@ -55,10 +59,10 @@ function VoterBox ({article})
             </span>
             
             <button 
-                className={`vote-btn ${hasVoted ? "voted" : ""}`}
+                className={`vote-btn ${userVote === -1 ? "down" : ""}`}
                 type="button" 
-                disabled={isVoting || hasVoted} 
-                onClick={()=>handleVote(-1)}>  
+                disabled={isVoting} 
+                onClick={()=>handleVote(userVote === -1 ? 0 : -1)}>  
                 ⬇️  
             </button>
 
