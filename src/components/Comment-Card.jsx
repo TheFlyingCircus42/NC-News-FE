@@ -7,8 +7,6 @@ function CommentCard ({comment,setComments})
 {
     const [isDeleteing , setIsDeleting]= useState(false)
     const [error , setError] = useState(null)
-    const [cmntDeleted , setCmntDeleted] = useState(false)
-
 
     const currentUser = "tickle122" /// HC USER
     const currCmntID = comment.comment_id
@@ -16,26 +14,22 @@ function CommentCard ({comment,setComments})
     const userIsAuthor = (comment.author === currentUser)
     
 
-    if(cmntDeleted) return null
-
     async function handleDelete (comment_id , cmnt_author , currentUser) 
     {
-        if(cmnt_author === currentUser)
+        if(!userIsAuthor || isDeleteing) return
         {
-            if(isDeleteing)return
-            setError(null)
             setIsDeleting(true)
-            setCmntDeleted(false)
             
-                try 
+            try 
                 {
                     await deleteCommentById(comment_id)
-                    setCmntDeleted(true)
-                    alert("Your comment has been deleted!")
+                    setComments((curr)=>
+                        curr.filter((c)=> c.comment_id !== comment_id))
+                        alert("Your comment has been deleted!")
                 }            
                 catch (err) 
                 {
-                    setError("Failed to delete comment - please try again later")
+                    setError("Failed to delete comment - please try again")
                 }
                 finally
                 {
@@ -74,7 +68,7 @@ function CommentCard ({comment,setComments})
         <div >
             {isDeleteing && <p className='dlt-cmnt-err-msg'>Attempting to delete your comment</p>}
             {error && <p className='dlt-cmnt-err-msg'>{error}</p>}
-            {cmntDeleted && <p className='cmnt-dlt-success-msg'>Your message has been deleted - please refresh to confirm. </p>}
+            <p className='cmnt-dlt-success-msg'>Your message has been deleted - please refresh to confirm. </p>
         </div>
 
     
