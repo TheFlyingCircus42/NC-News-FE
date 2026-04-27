@@ -41,12 +41,18 @@ function ArticleByID ()
 
         return(<>
         <ArticleByIDCard article={article}/>
+
         <VoterBox article={article} />
+        
         <CommentForm
                 article={article}
                 setComments={setComments}
         />
-        <CommentsByArticleID comments={comments} />
+
+        <CommentsByArticleID 
+                comments={comments}
+                setComments={setComments} 
+        />
 
         
         </>)       

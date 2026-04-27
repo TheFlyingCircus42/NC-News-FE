@@ -3,7 +3,7 @@ import { useState } from 'react'
 import deleteCommentById  from '../api-fetchers/deleteCommentById'
 
 
-function CommentCard ({comment}) 
+function CommentCard ({comment,setComments}) 
 {
     const [isDeleteing , setIsDeleting]= useState(false)
     const [error , setError] = useState(null)
