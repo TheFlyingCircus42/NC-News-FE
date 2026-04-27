@@ -32,7 +32,7 @@ function VoterBox ({article})
                     setVoteCount((currentVotes)=> currentVotes - change)
                     setError("Failed to make a vote. Try Again")
                 }
-                finally 
+            finally 
                 {
                     setIsVoting(false)
                 }
@@ -43,12 +43,23 @@ function VoterBox ({article})
 
         <div className="vote-box">
             
-            <button className="vote-btn" type="button" disabled={isVoting} onClick={()=>handleVote(+1)}>   ⬆️  </button>
+            <button 
+                className="vote-btn" 
+                type="button" 
+                disabled={isVoting} 
+                onClick={()=>handleVote(+1)}>
+                ⬆️  
+            </button>
             
             <span className="vote-count"> Votes: {voteCount} </span>
             
-            
-            <button className="vote-btn" type="button" disabled={isVoting} onClick={()=>handleVote(-1)}>  ⬇️  </button>
+            <button 
+                className="vote-btn" 
+                type="button" 
+                disabled={isVoting} 
+                onClick={()=>handleVote(-1)}>  
+                ⬇️  
+            </button>
 
             {error && <p className="vote-error">{error}</p>}
 
