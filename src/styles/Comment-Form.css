@@ -1,27 +1,89 @@
-/* .comment-box-container{
-    border: solid 1px black;
-    border-radius: 8px;
+.comment-box-container 
+    {
+        max-width: 780px;
+        margin: 2rem auto;
+        padding: 1rem;
+        background: #ffffff;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    }
+
+.comment-box-header 
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.8rem;
+    }
+
+.comment-user 
+    {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+.comment-avatar 
+    {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: #e5e7eb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+.comment-username 
+    {
+        font-weight: 500;
+        color: #111827;
+    }
+
+.comment-textarea 
+    {
+        width: 100%;
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+        padding: 0.8rem;
+        font-size: 0.95rem;
+        resize: none;
+        outline: none;
+        transition: border 0.15s ease;
 }
 
-.comment-box-header{
-  display: flex;  
-  justify-content: center;
-}
-.comment-box-header p{
-    padding: 6px;
-    margin: 6px;
-}
+.comment-textarea:focus 
+    {
+        border-color: #d71616;
+    }
 
-.cmnt-form-close-btn{
-     padding: 4px;
-     padding-top: 2px;
-     margin: 12px;
-     
-}
+.comment-actions 
+    {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 0.6rem;
+    }
 
-.comment-form{}
+.cmnt-form-post-btn 
+    {
+        background: #d71616;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.15s ease;
+    }
 
-.cmnt-form-post-btn{
-    padding: 4px;
-    margin: 6px;
-} */
+.cmnt-form-post-btn:hover 
+    {
+        background: #b81414;
+    }
+
+.cmnt-post-err 
+    {
+        margin-top: 0.5rem;
+        color: #dc2626;
+        font-size: 0.85rem;
+    }

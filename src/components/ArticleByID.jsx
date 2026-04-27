@@ -3,6 +3,9 @@ import fetchArticleByID from "../api-fetchers/fetchArticleByID"
 import ListArticleByID from "../list-builders/List-Article-By-ID"
 import { useParams } from "react-router-dom";
 import ArticleByIDCard from "./ArticleByIDCard";
+import VoterBox from './Display-Vote-Box'
+import CommentForm from './Comment-Form'
+import CommentsByArticleID from "./Comments-For-Article";
 
 function ArticleByID ()
 {
@@ -34,6 +37,8 @@ function ArticleByID ()
 
         return(<>
         <ArticleByIDCard article={article}/>
+        
+
         
         </>)       
 }

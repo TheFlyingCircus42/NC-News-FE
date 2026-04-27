@@ -21,18 +21,16 @@ function CommentForm ({article})
         setError(null)
 
         try
-            
             {
-               
                 const newComment = await postComment(article.article_id, userComment, currentUser)
                 setUserComment("")
                 alert("Your comment has been posted succesfully! - Press refresh to see it!")
             }
-                catch (err)
+            catch (err)
                 {
                     setError("Failed to Post Comment")
                 }
-                finally 
+            finally 
                 {
                     setIsPosting(false)
                 }
@@ -43,23 +41,32 @@ function CommentForm ({article})
         <div className="comment-box-container">
             
             <div className="comment-box-header">
-                <p>img</p>
-                <p>username</p>
+                <div className='comment-user'>
+                    <div className='comment-avatar'>👤</div>
+                    <span className='comment-username'>tickle122</span>
+                </div>
+
                 <button className='cmnt-form-close-btn'>  X  </button>
             </div>
 
-            <div className='comment-form'>
-                <textarea rows="6" cols="50" value={userComment} onChange={(e) => setUserComment(e.target.value)} disabled={isPosting}></textarea>
-            </div>
-
-            <div className='comment-form-menu'>
-                <div className='cmnt-form-menu-spacer'></div>
-                <button className='cmnt-form-post-btn' onClick={handleSubmit} disabled={isPosting}> | POST |</button>
-                
+            <textarea className="comment-textarea"
+                rows="5" 
+                cols="50"
+                value={userComment} 
+                onChange={(e) => setUserComment(e.target.value)} 
+                disabled={isPosting}>
+            </textarea>
+    
+            <div className='comment-actions'>
+                <button
+                    className="cmnt-form-post-btn"
+                    onClick={handleSubmit} 
+                    disabled={isPosting}>
+                    Post comment...
+                </button>
             </div>
 
             {error && <p className="cmnt-post-err">{error}</p>}
-
         </div>
     )
 }
