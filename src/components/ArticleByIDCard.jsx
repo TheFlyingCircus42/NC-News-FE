@@ -7,34 +7,48 @@ import CommentForm from './Comment-Form'
 function ArticleByIDCard ({article})
 {
     if (!article) return null;
-    
+    console.log("THIS ARTICLE", article)
+
+        const {
+        article_id,
+        article_img_url,
+        author,
+        created_at,
+        title,
+        topic,
+        body,
+        votes
+    } = article;
+
   return(
+        <article className='article-page'>
+      
+            <header className='article-header'>
+                <p className='article-topic'>{topic?.toUpperCase()} </p>
+                <h1 className='article-title'>{title}</h1>
+            </header>
 
-    <div className="article-card">
+            <div className='article-meta'>
+                <span className='meta-item'>By {author}</span>
+                <span className='meta-item'>{new Date(created_at).toLocaleDateString("en-GB")}</span>
+                {/* <span className='meta-item'>💬 {article.comment_count}</span> */}
+                {/* <span className='meta-item'>{article.votes}</span> */}
+            </div>
 
-        <h4 className="article-card-topic">{(article.topic)}</h4>
-        
-         <h3 className="article-card-title">{article.title}</h3>
+            <img className='article-card-img'
+                src={article_img_url}
+                alt={title} />
+            
+            <section className="article-body">
+                {body}
+            </section>
 
-        <div className="article-card-content">
-            <img className="article-card-img" src = {article.article_img_url} alt={article.title}/>
-            <p className="article-card-text">{article.body}</p>
-        </div>
+            <VoterBox article={article}></VoterBox>
+            <CommentForm article={article}></CommentForm>
 
-        <div className="article-card-footer">  
-            <p className="article-card-footer-content"> By {article.author} | {new Date(article.created_at).toLocaleDateString()} | Comments: {article.comment_count}  </p>
-        </div>
-
-        <VoterBox article={article}></VoterBox>
-        {/* <AddComment article={article}></AddComment> */}
-        <CommentForm article={article}></CommentForm>
-
-
-
-
-   
-    </div>)
-
+        </article>
+    )
 }
 
 export default ArticleByIDCard
+
