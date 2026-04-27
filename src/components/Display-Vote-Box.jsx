@@ -45,7 +45,8 @@ function VoterBox ({article})
             
             <button className="vote-btn" type="button" disabled={isVoting} onClick={()=>handleVote(+1)}>   ⬆️  </button>
             
-            <p>  Votes: {voteCount}  </p>
+            <span className="vote-count"> Votes: {voteCount} </span>
+            
             
             <button className="vote-btn" type="button" disabled={isVoting} onClick={()=>handleVote(-1)}>  ⬇️  </button>
 
