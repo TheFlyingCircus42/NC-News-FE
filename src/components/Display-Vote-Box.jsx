@@ -7,9 +7,9 @@ function VoterBox ({article})
 {
     const [voteCount , setVoteCount] = useState(article.votes)
     const [isVoting , setIsVoting] = useState(false)
-    // const [hasVoted , setHasVoted] = useState(false)
     const [userVote, setUserVote] = useState(0)
     const [error , setError] = useState(null)
+    const [animateVote, setAnimateVote] = useState(false)
 
     useEffect(()=>
         {
@@ -24,6 +24,7 @@ function VoterBox ({article})
 
         const change = newVote - userVote
         setVoteCount((curr) => curr + change)
+        setAnimateVote(true)
         setUserVote(newVote)
 
         try 
@@ -39,6 +40,7 @@ function VoterBox ({article})
             finally 
                 {
                     setIsVoting(false)
+                    setTimeout(() => setAnimateVote(false), 150);
                 }
     }
 
@@ -54,8 +56,9 @@ function VoterBox ({article})
                 ⬆️  
             </button>
             
-            <span className="vote-count">
-                {voteCount} 
+            <span 
+                className={`vote-count ${animateVote ? "pulse" : ""}`}>
+                {voteCount}
             </span>
             
             <button 
