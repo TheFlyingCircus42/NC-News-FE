@@ -1,4 +1,7 @@
-// import ArticleCard from '../components/ArticleCard'
+/// THIS FILE IS REDUNDANT
+/// ARTICLE BY ID CARD IS NOW CALLED DIRECTLY TO ARTICLE BY ID JSX
+
+/// THIS FILE CAN BE DELETED
 
 import ArticleByIDCard from "../components/ArticleByIDCard"
 
