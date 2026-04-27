@@ -1,6 +1,7 @@
 
 import { useState , useEffect } from "react"
 import patchArticleVotes from "../api-fetchers/patchArticleVotes"
+import '../styles/Voter.css'
 
 function VoterBox ({article}) 
 {
@@ -8,7 +9,6 @@ function VoterBox ({article})
     const [isVoting , setIsVoting] = useState(false)
     const [hasVoted , setHasVoted] = useState(false)
     const [error , setError] = useState(null)
-
 
     useEffect(()=>
         {
@@ -38,15 +38,14 @@ function VoterBox ({article})
                 }
     }
 
-
     return(
 
         <div className="vote-box">
             
             <button 
-                className="vote-btn" 
+                className={`vote-btn ${hasVoted ? "voted" : ""}`}
                 type="button" 
-                disabled={isVoting} 
+                disabled={isVoting || hasVoted} 
                 onClick={()=>handleVote(+1)}>
                 ⬆️  
             </button>
@@ -56,9 +55,9 @@ function VoterBox ({article})
             </span>
             
             <button 
-                className="vote-btn" 
+                className={`vote-btn ${hasVoted ? "voted" : ""}`}
                 type="button" 
-                disabled={isVoting} 
+                disabled={isVoting || hasVoted} 
                 onClick={()=>handleVote(-1)}>  
                 ⬇️  
             </button>
