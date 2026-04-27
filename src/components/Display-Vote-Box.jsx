@@ -41,13 +41,13 @@ function VoterBox ({article})
 
     return(
 
-        <div className="article-voter-box">
+        <div className="vote-box">
             
-            <button className="vote-minus-btn" type="button" disabled={isVoting} onClick={()=>handleVote(-1)}>  - VOTE  </button>
+            <button className="vote-btn" type="button" disabled={isVoting} onClick={()=>handleVote(+1)}>   ⬆️  </button>
             
             <p>  Votes: {voteCount}  </p>
             
-            <button className="vote-plus-btn" type="button" disabled={isVoting} onClick={()=>handleVote(+1)}>  + VOTE  </button>
+            <button className="vote-btn" type="button" disabled={isVoting} onClick={()=>handleVote(-1)}>  ⬇️  </button>
 
             {error && <p className="vote-error">{error}</p>}
 
