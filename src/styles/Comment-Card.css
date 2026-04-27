@@ -65,6 +65,13 @@
     color: #111827;
   }
 
+.comment-actions
+  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.4rem;
+  }
 
 /* OPTIMISTIC AND PESSIMISTC RENDERING FOR POST & DELET ACTIONS  */
 
