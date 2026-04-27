@@ -73,7 +73,7 @@
     margin-top: 0.4rem;
   }
 
-.comment-delete-btn
+.cmnt-card-dlt-btn
   {
     background: none;
     border: none;
@@ -81,11 +81,19 @@
     font-size: 0.8rem;
     cursor: pointer;
   }
-.comment-delete-btn:hover
+.cmnt-card-dlt-btn:hover
   {
     text-decoration: underline;
   }
 
+.comment-votes
+  {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    color: #6b7280;
+  }
 /* OPTIMISTIC AND PESSIMISTC RENDERING FOR POST & DELET ACTIONS  */
 
 .comment-card.deleting {
