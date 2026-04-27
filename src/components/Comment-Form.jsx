@@ -51,7 +51,6 @@ function CommentForm ({article})
 
             <textarea className="comment-textarea"
                 rows="5" 
-                cols="50"
                 value={userComment} 
                 onChange={(e) => setUserComment(e.target.value)} 
                 disabled={isPosting}>
