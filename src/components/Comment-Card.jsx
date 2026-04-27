@@ -41,7 +41,10 @@ function CommentCard ({comment,setComments})
 
     return(
     // <div className="comment-card">
-        <div className={`comment-card ${comment.optimistic ? "optimistic" : ""}`}>
+        <div className={`comment-card 
+            ${comment.optimistic ? "optimistic" : ""}
+            ${isDeleteing ? "deleting" : ""}`
+            }>
         <div className="comment-card-top">
             <p>Image</p>
             <p>{comment.author}</p>
@@ -58,21 +61,17 @@ function CommentCard ({comment,setComments})
         <div className="comment-card-footer">
             
             {userIsAuthor && <button className="cmnt-card-dlt-btn" type="button" onClick={()=>handleDelete(currCmntID , cmntAuthor , currentUser)}> | DELETE | </button>}
-            {userIsAuthor && <p> | PATCH | </p>}
-            {userIsAuthor && <p>       </p>}
-                   
+           
+            <div >
+                {isDeleteing && <p className='dlt-cmnt-err-msg'>Deleting comment</p>}
+                {error && <p className='dlt-cmnt-err-msg'>{error}</p>}
+            </div>
+
             <p> |  + VOTE  | </p>
             <p> |  - VOTE  | </p>
         </div>
 
-        <div >
-            {isDeleteing && <p className='dlt-cmnt-err-msg'>Attempting to delete your comment</p>}
-            {error && <p className='dlt-cmnt-err-msg'>{error}</p>}
-            <p className='cmnt-dlt-success-msg'>Your message has been deleted - please refresh to confirm. </p>
-        </div>
 
-    
-        
 
     </div>
 

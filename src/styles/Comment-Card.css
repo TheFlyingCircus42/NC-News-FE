@@ -1,3 +1,9 @@
+.comment-card.deleting {
+  opacity: 0.5;
+  pointer-events: none;
+  border: solid 4px red;
+}
+
 .comment-card.optimistic
 {
   opacity: 0.6;
