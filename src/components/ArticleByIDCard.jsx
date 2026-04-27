@@ -24,11 +24,12 @@ function ArticleByIDCard ({article})
         <article className='article-page'>
       
             <header className='article-header'>
-                <p className='article-topic'>{topic?.toUpperCase()} </p>
+                {/* <p className='article-topic'>{topic?.toUpperCase()} </p> */}
                 <h1 className='article-title'>{title}</h1>
             </header>
 
             <div className='article-meta'>
+                {/* <p className='article-topic'>{topic?.toUpperCase()} </p> */}
                 <span className='meta-item'>By {author}</span>
                 <span className='meta-item'>{new Date(created_at).toLocaleDateString("en-GB")}</span>
                 {/* <span className='meta-item'>💬 {article.comment_count}</span> */}
