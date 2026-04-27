@@ -20,6 +20,8 @@
     border-radius: 10px;
     padding: 0.9rem 1rem;
 
+    transition: background 0.15s ease, opacity 0.2s ease;
+
   }
 
 
