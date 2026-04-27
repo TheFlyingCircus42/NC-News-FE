@@ -1,4 +1,4 @@
-import '../styles/Article-Cards.css' /// MAKE OWN CSS FILE
+import '../styles/Article-By-ID.css'
 import './Display-Vote-Box'
 import VoterBox from './Display-Vote-Box'
 import CommentForm from './Comment-Form'
@@ -35,7 +35,7 @@ function ArticleByIDCard ({article})
                 {/* <span className='meta-item'>{article.votes}</span> */}
             </div>
 
-            <img className='article-card-img'
+            <img className='article-image'
                 src={article_img_url}
                 alt={title} />
             

@@ -87,11 +87,6 @@
         color: #6b7280;
     }
 
-/* .article-card-footer span:first-child
-    {
-        margin-right: auto;
-    } */
-
 .footer-right
     {
         display: flex;
@@ -116,7 +111,7 @@
         border-radius: 6px;
         transition: background 0.15s ease;
     }
-.meta-item:hover
+.article-card .meta-item:hover
     {
         background: #6b728036;
     }
