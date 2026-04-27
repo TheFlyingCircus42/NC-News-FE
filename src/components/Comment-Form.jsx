@@ -8,10 +8,8 @@ function CommentForm ({article, setComments})
     const [userComment , setUserComment] = useState("")
     const [isPosting , setIsPosting] = useState(false)
     const [error , setError] = useState(null)
-
+    //// HARD CODED USER NAME BELOW ///
     const currentUser = "tickle122"
-
-
 
     async function handleSubmit () 
     {
@@ -20,19 +18,46 @@ function CommentForm ({article, setComments})
         setIsPosting(true)
         setError(null)
 
+        const tempComment = {
+            comment_id: Date.now,
+            author: currentUser,
+            body: userComment,
+            created_at: new Date().toISOString(),
+            votes:0,
+            optimistic: true
+        }
+
+        setComments((curr)=>[tempComment, ...curr])
+        setUserComment("")
+        
+
         try
             {
-                const newComment = await postComment(article.article_id, userComment, currentUser)
-                setUserComment("")
-                alert("Your comment has been posted succesfully! - Press refresh to see it!")
+                const newComment = 
+                await postComment(
+                        article.article_id,
+                        userComment, 
+                        currentUser)
+
+                setComments((curr)=>
+                curr.map((c)=>
+                    c.comment_id === tempComment.comment_id
+                    ? newComment.comment
+                    : c
+                ))
+
             }
             catch (err)
                 {
-                    setError("Failed to Post Comment")
+                   setComments((curr)=>
+                    curr.filter((c)=> c.comment_id !== tempComment.comment_id))
+                    
+                   setError("Failed to Post Comment")
                 }
             finally 
                 {
                     setIsPosting(false)
+
                 }
     }
     

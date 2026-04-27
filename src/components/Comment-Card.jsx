@@ -46,8 +46,8 @@ function CommentCard ({comment})
     }
 
     return(
-    <div className="comment-card">
-
+    // <div className="comment-card">
+        <div className={`comment-card ${comment.optimistic ? "optimistic" : ""}`}>
         <div className="comment-card-top">
             <p>Image</p>
             <p>{comment.author}</p>
