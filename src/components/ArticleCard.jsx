@@ -1,6 +1,6 @@
 /// ARTICLE PREVIEW CARD COMPONENT --> ArticleCard.jsx
 
-import '../styles/Article-Cards.css'
+import '../styles/Article-By-ID.css'
 import { Link } from 'react-router-dom'
 
 function ArticleCard ({ article })
