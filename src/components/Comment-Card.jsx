@@ -53,7 +53,7 @@ function CommentCard ({comment,setComments})
             </div>
 
             <div className='comment-body'>
-                <p>{comment.body}</p>
+                {comment.body}
                 <span className='comment-date'>
                     {new Date(comment.created_at).toLocaleDateString()}
                 </span>
