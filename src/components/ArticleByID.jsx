@@ -2,7 +2,6 @@ import { useState , useEffect } from "react"
 import fetchArticleByID from "../api-fetchers/fetchArticleByID"
 import ListArticleByID from "../list-builders/List-Article-By-ID"
 import { useParams } from "react-router-dom";
-import CommentsByArticleID from "./Comments-For-Article";
 import ArticleByIDCard from "./ArticleByIDCard";
 
 function ArticleByID ()
@@ -35,7 +34,6 @@ function ArticleByID ()
 
         return(<>
         <ArticleByIDCard article={article}/>
-        <CommentsByArticleID article={article}/>
         
         </>)       
 }
