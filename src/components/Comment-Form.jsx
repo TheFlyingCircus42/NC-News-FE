@@ -17,6 +17,7 @@ function CommentForm ({article, setComments})
 
         setIsPosting(true)
         setError(null)
+        const commentText = userComment
 
         const tempComment = {
             comment_id: Date.now,
@@ -28,8 +29,6 @@ function CommentForm ({article, setComments})
         }
 
         setComments((curr)=>[tempComment, ...curr])
-        setUserComment("")
-        
 
         try
             {
@@ -45,6 +44,8 @@ function CommentForm ({article, setComments})
                     ? newComment.comment
                     : c
                 ))
+
+                setUserComment("")
 
             }
             catch (err)
