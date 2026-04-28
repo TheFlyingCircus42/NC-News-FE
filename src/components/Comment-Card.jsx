@@ -61,12 +61,7 @@ function CommentCard ({comment,setComments})
 
             <div className='comment-actions'>
 
-                {userIsAuthor && <button 
-                    className="cmnt-card-dlt-btn" 
-                    type="button" 
-                    onClick={()=>handleDelete(currCmntID , cmntAuthor , currentUser)}>
-                    {isDeleteing ? "Deleting..." : "Delete"}
-                </button>}
+
 
 
                 <div className='comment-votes'>
@@ -74,6 +69,13 @@ function CommentCard ({comment,setComments})
                     <span>{comment.votes}</span>
                     <button>⬇️</button>
                 </div>
+
+                {userIsAuthor && <button 
+                    className="cmnt-card-dlt-btn" 
+                    type="button" 
+                    onClick={()=>handleDelete(currCmntID , cmntAuthor , currentUser)}>
+                    {isDeleteing ? "Deleting..." : "Delete"}
+                </button>}
 
             </div>
 
