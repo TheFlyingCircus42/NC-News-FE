@@ -51,14 +51,14 @@ function CommentCard ({comment,setComments})
                 <div className='comment-user'>
                     <div className='comment-avatar'> 👤 </div>
                     <span className='comment-author'> {comment.author} </span>
+                    <span className='comment-date'>
+                        {new Date(comment.created_at).toLocaleDateString()}
+                    </span>
                 </div>
             </div>
 
             <div className='comment-body'>
                 {comment.body}
-                <span className='comment-date'>
-                    {new Date(comment.created_at).toLocaleDateString()}
-                </span>
             </div>
 
             <div className='comment-actions'>

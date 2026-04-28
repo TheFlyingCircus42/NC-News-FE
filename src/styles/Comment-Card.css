@@ -64,6 +64,7 @@
     font-size: 0.95rem;
     line-height: 1.5;
     color: #111827;
+    margin: 0.2rem;
   }
 
 .comment-actions
@@ -71,7 +72,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 0.4rem;
+    margin: 0.2rem;
   }
 
 .cmnt-card-dlt-btn
