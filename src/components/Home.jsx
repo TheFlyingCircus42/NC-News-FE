@@ -25,7 +25,7 @@ function Home (){
                 })
         }, [])
 
-    if (!featured) return
+    if (!featured) return <p>Loading...</p>
 
     return(
        <div className='home-container'>

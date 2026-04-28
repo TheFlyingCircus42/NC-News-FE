@@ -91,3 +91,9 @@
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         gap: 1rem;
     }
+
+.trending-card.featured 
+    {
+        grid-column: span 2;
+        transform: scale(1.02);
+    }
