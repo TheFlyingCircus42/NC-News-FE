@@ -14,18 +14,32 @@ function Home (){
                     const articles = data.articles
                     const random = articles[Math.floor(Math.random() * articles.length)]
                     setFeatured(random)
-                    
-
                 })
-
-                    console.log("FEATURE:", featured)
-
         }, [])
 
-        if (!featured) return
+    if (!featured) return
 
     return(
-        <p>random title</p>
+       <div className='home-container'>
+
+            <Link to={`/articles/${featured.article_id}`}
+                className='home-featured'>
+
+                    <img 
+                        src={featured.article_img_url}
+                        alt={featured.title}
+                        className='home-featured-img'>
+                    </img>    
+
+
+                    <div className='home-featured-overlay'>
+                        <p className='home-featured-topic'>{featured.topic}</p>
+                        <h2 className='home-featured-title'>{featured.title}</h2>
+                    </div>
+
+            </Link>
+
+       </div>
     )
 }
 
