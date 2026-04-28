@@ -7,6 +7,7 @@ import VoterBox from './Display-Vote-Box'
 import CommentForm from './Comment-Form'
 import CommentsByArticleID from "./Comments-For-Article";
 import "../api-fetchers/patchArticleVotes"
+import patchArticleVotes from "../api-fetchers/patchArticleVotes";
 
 function ArticleByID ()
 {
@@ -43,16 +44,20 @@ function ArticleByID ()
         return(<>
         <ArticleByIDCard article={article}/>
 
-        <VoterBox article={article} />
+        <VoterBox 
+            itemId={article.article_id}
+            votes={article.votes}
+            patchVotes={patchArticleVotes}
+        />
         
         <CommentForm
-                article={article}
-                setComments={setComments}
+            article={article}
+            setComments={setComments}
         />
 
         <CommentsByArticleID 
-                comments={comments}
-                setComments={setComments} 
+            comments={comments}
+            setComments={setComments} 
         />
 
         
