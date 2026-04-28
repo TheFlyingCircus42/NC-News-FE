@@ -84,3 +84,10 @@
         font-size: 1.6rem;
         margin: 0;
     }
+
+.home-trending-row
+    {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+    }
