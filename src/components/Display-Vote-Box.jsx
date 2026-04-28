@@ -49,7 +49,7 @@ function VoterBox ({itemId, votes, patchVotes})
                 }
     }
 
-    return(
+    return(<>
 
         <div className="vote-box">
             
@@ -74,10 +74,15 @@ function VoterBox ({itemId, votes, patchVotes})
                 ⬇️  
             </button>
 
-            {error && <p className="vote-error">{error}</p>}
+            
 
         </div>
-    )
+
+        <div className="vote-error">
+            {error && <span className="vote-error">Your vote change has not been counted.</span>}
+        </div>
+        
+    </>)
 }
 
 export default VoterBox 
