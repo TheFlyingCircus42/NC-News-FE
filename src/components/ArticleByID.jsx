@@ -6,6 +6,7 @@ import ArticleByIDCard from "./ArticleByIDCard";
 import VoterBox from './Display-Vote-Box'
 import CommentForm from './Comment-Form'
 import CommentsByArticleID from "./Comments-For-Article";
+import "../api-fetchers/patchArticleVotes"
 
 function ArticleByID ()
 {
