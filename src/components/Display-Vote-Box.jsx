@@ -1,11 +1,12 @@
 
 import { useState , useEffect } from "react"
-import patchArticleVotes from "../api-fetchers/patchArticleVotes"
 import '../styles/Voter.css'
 
-function VoterBox ({article}) 
+/// TAKES AN ITEM ID, VOTES (to change), FUNCTION (which api call)
+
+function VoterBox ({itemId, votes, patchVotes}) 
 {
-    const [voteCount , setVoteCount] = useState(article.votes)
+    const [voteCount , setVoteCount] = useState(votes)
     const [isVoting , setIsVoting] = useState(false)
     const [userVote, setUserVote] = useState(0)
     const [error , setError] = useState(null)
@@ -13,8 +14,8 @@ function VoterBox ({article})
 
     useEffect(()=>
         {
-            setVoteCount(article.votes)
-        } , [article.votes]) 
+            setVoteCount(votes)
+        } , [votes]) 
 
     async function handleVote(newVote)
     {
@@ -22,19 +23,22 @@ function VoterBox ({article})
         setError(null)
         setIsVoting(true)
 
+        const prevVote = userVote
         const change = newVote - userVote
+        
+
         setVoteCount((curr) => curr + change)
         setAnimateVote(true)
         setUserVote(newVote)
 
         try 
             {
-                await patchArticleVotes(article.article_id , change)
+                await patchVotes(itemId , change)
             } 
             catch (err) 
                 {
                     setVoteCount((curr)=> curr - change)
-                    setUserVote(userVote)
+                    setUserVote(prevVote)
                     setError("Failed to make a vote. Try Again")
                 }
             finally 
@@ -44,7 +48,7 @@ function VoterBox ({article})
                 }
     }
 
-    return(
+    return(<>
 
         <div className="vote-box">
             
@@ -69,10 +73,15 @@ function VoterBox ({article})
                 ⬇️  
             </button>
 
-            {error && <p className="vote-error">{error}</p>}
+            
 
         </div>
-    )
+
+        <div className="vote-error">
+            {error && <span className="vote-error">Your vote change has not been counted.</span>}
+        </div>
+        
+    </>)
 }
 
 export default VoterBox 

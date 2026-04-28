@@ -17,6 +17,7 @@
     border: 1px solid #e5e7eb;
     border-radius: 10px;
     padding: 0.9rem 1rem;
+    padding-bottom: 0.4rem;
     transition: background 0.15s ease, opacity 0.2s ease;
   }
 
@@ -63,6 +64,7 @@
     font-size: 0.95rem;
     line-height: 1.5;
     color: #111827;
+    margin: 0.2rem;
   }
 
 .comment-actions
@@ -70,7 +72,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 0.4rem;
+    margin: 0.2rem;
   }
 
 .cmnt-card-dlt-btn
@@ -94,6 +96,16 @@
     font-size: 0.85rem;
     color: #6b7280;
   }
+
+.comment-voter-wrapper
+  {
+    transform: scale(0.8);
+    transform-origin: left center;
+    display: inline-flex;
+  }
+.comment-voter-wrapper .vote-box {
+  margin-top: 0;
+}
 /* OPTIMISTIC AND PESSIMISTC RENDERING FOR POST & DELET ACTIONS  */
 
 .comment-card.deleting {
