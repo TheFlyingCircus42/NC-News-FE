@@ -31,11 +31,14 @@ function Home (){
                         className='home-featured-img'>
                     </img>    
 
+                    <div className='home-featured-badge'>
+                        Featured Article
+                    </div>
 
                     <div className='home-featured-overlay'>
                         <p className='home-featured-topic'>{featured.topic}</p>
                         <h2 className='home-featured-title'>{featured.title}</h2>
-                    </div>
+                </div>
 
             </Link>
 
