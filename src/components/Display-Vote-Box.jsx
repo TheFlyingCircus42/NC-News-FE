@@ -7,7 +7,7 @@ import '../styles/Voter.css'
 
 function VoterBox ({itemId, votes, patchVotes}) 
 {
-    const [voteCount , setVoteCount] = useState(article.votes)
+    const [voteCount , setVoteCount] = useState(votes)
     const [isVoting , setIsVoting] = useState(false)
     const [userVote, setUserVote] = useState(0)
     const [error , setError] = useState(null)
@@ -24,7 +24,10 @@ function VoterBox ({itemId, votes, patchVotes})
         setError(null)
         setIsVoting(true)
 
+        const prevVote = userVote
         const change = newVote - userVote
+        
+
         setVoteCount((curr) => curr + change)
         setAnimateVote(true)
         setUserVote(newVote)
@@ -36,7 +39,7 @@ function VoterBox ({itemId, votes, patchVotes})
             catch (err) 
                 {
                     setVoteCount((curr)=> curr - change)
-                    setUserVote((curr)=> curr - change)
+                    setUserVote(prevVote)
                     setError("Failed to make a vote. Try Again")
                 }
             finally 
