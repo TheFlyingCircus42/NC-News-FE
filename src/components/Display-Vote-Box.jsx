@@ -3,6 +3,8 @@ import { useState , useEffect } from "react"
 import patchArticleVotes from "../api-fetchers/patchArticleVotes"
 import '../styles/Voter.css'
 
+/// TAKES AN ITEM ID, VOTES (to change), FUNCTION (which api call)
+
 function VoterBox ({itemId, votes, patchVotes}) 
 {
     const [voteCount , setVoteCount] = useState(article.votes)
