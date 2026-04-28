@@ -2,6 +2,7 @@ import '../styles/Article-By-ID.css'
 import './Display-Vote-Box'
 import VoterBox from './Display-Vote-Box'
 import CommentForm from './Comment-Form'
+import CommentsByArticleID from "./Comments-For-Article";
 
 
 function ArticleByIDCard ({article})
@@ -44,8 +45,9 @@ function ArticleByIDCard ({article})
                 {body}
             </section>
 
-            <VoterBox article={article}></VoterBox>
-            <CommentForm article={article}></CommentForm>
+            {/* <VoterBox article={article}></VoterBox> */}
+            {/* <CommentForm article={article}></CommentForm> */}
+            {/* <CommentsByArticleID article={article}/> */}
 
         </article>
     )

@@ -1,46 +1,73 @@
 
 import { useState , useEffect } from "react"
 import patchArticleVotes from "../api-fetchers/patchArticleVotes"
+import '../styles/Voter.css'
 
 function VoterBox ({article}) 
 {
     const [voteCount , setVoteCount] = useState(article.votes)
     const [isVoting , setIsVoting] = useState(false)
-    const [hasVoted , setHasVoted] = useState(false)
+    const [userVote, setUserVote] = useState(0)
     const [error , setError] = useState(null)
+    const [animateVote, setAnimateVote] = useState(false)
 
-    async function handleVote(change)
+    useEffect(()=>
+        {
+            setVoteCount(article.votes)
+        } , [article.votes]) 
+
+    async function handleVote(newVote)
     {
-        if (isVoting || hasVoted) return
+        if (isVoting) return
         setError(null)
         setIsVoting(true)
-        setVoteCount((currentVotes) => currentVotes + change)
+
+        const change = newVote - userVote
+        setVoteCount((curr) => curr + change)
+        setAnimateVote(true)
+        setUserVote(newVote)
 
         try 
             {
                 await patchArticleVotes(article.article_id , change)
-                setHasVoted(true)
             } 
             catch (err) 
                 {
-                    setVoteCount((currentVotes)=> currentVotes - change)
+                    setVoteCount((curr)=> curr - change)
+                    setUserVote(userVote)
                     setError("Failed to make a vote. Try Again")
                 }
-                finally 
+            finally 
                 {
                     setIsVoting(false)
+                    setTimeout(() => setAnimateVote(false), 150);
                 }
     }
 
     return(
 
-        <div className="article-voter-box">
+        <div className="vote-box">
             
-            <button className="vote-minus-btn" type="button" disabled={isVoting} onClick={()=>handleVote(-1)}>  - VOTE  </button>
+            <button 
+                className={`vote-btn ${userVote === 1 ? "up" : ""}`}
+                type="button" 
+                disabled={isVoting} 
+                onClick={()=>handleVote(userVote === 1 ? 0 : 1)}>
+                ⬆️  
+            </button>
             
-            <p>  Votes: {voteCount}  </p>
+            <span 
+                className={`vote-count ${animateVote ? "pulse" : ""}`}>
+                {voteCount}
+            </span>
             
-            <button className="vote-plus-btn" type="button" disabled={isVoting} onClick={()=>handleVote(+1)}>  + VOTE  </button>
+            <button 
+                className={`vote-btn ${userVote === -1 ? "down" : ""}`}
+                type="button" 
+                disabled={isVoting} 
+                onClick={()=>handleVote(userVote === -1 ? 0 : -1)}>  
+                ⬇️  
+            </button>
 
             {error && <p className="vote-error">{error}</p>}
 
