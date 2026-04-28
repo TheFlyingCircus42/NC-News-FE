@@ -33,17 +33,14 @@ function Home (){
             <div className='home-featured-container'>
             <Link to={`/articles/${featured.article_id}`}
                 className='home-featured'>
-
                     <img 
                         src={featured.article_img_url}
                         alt={featured.title}
                         className='home-featured-img'>
                     </img>    
-
                     <div className='home-featured-badge'>
                         Featured Article
                     </div>
-
                     <div className='home-featured-overlay'>
                         <p className='home-featured-topic'>{featured.topic}</p>
                         <h2 className='home-featured-title'>{featured.title}</h2>
@@ -51,12 +48,19 @@ function Home (){
             </Link>
             </div>
 
-            <div className='home-trending-row'>
-                {trending.map((article, i)=>(
-                    <div className={`trending-card ${i === 0 ? "featured" : ""}`}>
-                        <ArticleCard article={article}/>
-                    </div>
-                ))}
+    
+            <div className='home-section'>
+                <h2 className='section-title'>
+                    Trending Articles
+                </h2>
+                
+                <div className='home-trending-row'>
+                    {trending.map((article, i)=>(
+                        <div className={`trending-card ${i === 0 ? "featured" : ""}`}>
+                            <ArticleCard article={article}/>
+                        </div>
+                    ))}
+            </div>
             </div>
 
        </div>
