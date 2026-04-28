@@ -63,17 +63,13 @@ function CommentCard ({comment,setComments})
 
             <div className='comment-actions'>
 
-                {/* <div className='comment-votes'>
-                    <button>⬆️</button>
-                    <span>{comment.votes}</span>
-                    <button>⬇️</button>
-                </div> */}
-
-                <VoterBox
+                
+                <div className='comment-voter-wrapper'>
+                    <VoterBox 
                     itemId={comment.comment_id}
                     votes={comment.votes}
                     patchVotes={patchCommentVotes}>
-                </VoterBox>
+                </VoterBox> </div>
 
                 {userIsAuthor && <button 
                     className="cmnt-card-dlt-btn" 
