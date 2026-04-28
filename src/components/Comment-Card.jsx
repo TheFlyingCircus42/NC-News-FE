@@ -2,6 +2,8 @@ import '../styles/Comment-Card.css'
 import { useState } from 'react'
 import deleteCommentById  from '../api-fetchers/deleteCommentById'
 
+import VoterBox from './Display-Vote-Box'
+import patchCommentVotes from '../api-fetchers/patchCommentVotes'
 
 function CommentCard ({comment,setComments}) 
 {
@@ -23,7 +25,7 @@ function CommentCard ({comment,setComments})
             try 
                 {
                     await deleteCommentById(comment_id)
-                    setComments((curr)=>
+                        setComments((curr)=>
                         curr.filter((c)=> c.comment_id !== comment_id))
                         alert("Your comment has been deleted!")
                 }            
@@ -61,14 +63,17 @@ function CommentCard ({comment,setComments})
 
             <div className='comment-actions'>
 
-
-
-
-                <div className='comment-votes'>
+                {/* <div className='comment-votes'>
                     <button>⬆️</button>
                     <span>{comment.votes}</span>
                     <button>⬇️</button>
-                </div>
+                </div> */}
+
+                <VoterBox
+                    itemId={comment.comment_id}
+                    votes={comment.votes}
+                    patchVotes={patchCommentVotes}>
+                </VoterBox>
 
                 {userIsAuthor && <button 
                     className="cmnt-card-dlt-btn" 
