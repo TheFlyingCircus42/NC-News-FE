@@ -3,7 +3,7 @@ import { useState , useEffect } from "react"
 import patchArticleVotes from "../api-fetchers/patchArticleVotes"
 import '../styles/Voter.css'
 
-function VoterBox ({article}) 
+function VoterBox ({itemId, votes, patchVotes}) 
 {
     const [voteCount , setVoteCount] = useState(article.votes)
     const [isVoting , setIsVoting] = useState(false)
@@ -13,8 +13,8 @@ function VoterBox ({article})
 
     useEffect(()=>
         {
-            setVoteCount(article.votes)
-        } , [article.votes]) 
+            setVoteCount(votes)
+        } , [votes]) 
 
     async function handleVote(newVote)
     {
@@ -29,12 +29,12 @@ function VoterBox ({article})
 
         try 
             {
-                await patchArticleVotes(article.article_id , change)
+                await patchVotes(itemId , change)
             } 
             catch (err) 
                 {
                     setVoteCount((curr)=> curr - change)
-                    setUserVote(userVote)
+                    setUserVote((curr)=> curr - change)
                     setError("Failed to make a vote. Try Again")
                 }
             finally 
