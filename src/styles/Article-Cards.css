@@ -87,7 +87,7 @@
         color: #6b7280;
     }
 
-.footer-right
+.article-footer-right
     {
         display: flex;
         gap: 0.3rem;
@@ -115,80 +115,3 @@
     {
         background: #6b728036;
     }
-/* .article-card{
-    border: solid 2px black;
-    border-radius: 8px;
-    margin: 8px;
-    width:auto
-} */
-
-/* .article-card-topic{
-    display: flex;
-    justify-content: space-evenly;
-    border-radius: 8px;
-} */
-
-/* .article-card-title{
-    display: flex;
-    justify-content: space-evenly;
-    border-radius: 8px;    
-} */
-
-/* .article-card-content{
-    display: flex;
-    padding: 8px;
-    border-radius: 8px;
-} */
-
-/* .article-card-img{
-    height: 100px;
-    width: auto;
-    margin: 8px; 
-    border-radius: 8px;
-} */
-
-/* .article-card-text{
-    display: flex;
-    justify-content: flex-start;
-    margin: 8px; 
-    border-radius: 8px;
-} */
-
-/* .article-card-footer{
-    display: flex;
-    justify-content: space-evenly;
-    border-radius: 8px;
-} */
-
-/* .article-card-footer-content{
-    margin: 2px;
-    padding: 2px;
-    color: chocolate;
-} */
-
-/* .article-voter-box{
-    border: solid 1px black;
-    border-radius: 8px;
-    display: flex; 
-    justify-content: space-evenly;
-    margin: 4px;
-} */
-
-/* .article-voter-box p{
-    margin: 6px;
-} */
-
-/* .vote-minus-btn{
-    border: solid 1px black;
-    border-radius: 4px;
-    margin: 6px;
-    padding: 4px 8px;
-} */
-
-/* .vote-plus-btn{
-border: solid 1px black;
-    border-radius: 4px;
-    margin: 6px;
-    padding: 4px 8px;
-} */
-

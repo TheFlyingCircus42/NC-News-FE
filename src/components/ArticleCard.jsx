@@ -50,11 +50,11 @@ function ArticleCard ({ article })
 
         <div className="article-card-footer">
 
-                <span className='footer-left'>
+                <span className='article-footer-left'>
                     <span className='meta-item'>  👤 By {author || "unkown"}  </span>
                 </span>
                 
-                <span className='footer-right'>
+                <span className='article-footer-right'>
                     <span className='meta-item'>  💬 {comment_count ?? 0}  </span>
                     <span className='meta-item'>  ⬆️ {votes ?? 0}  </span>
                 </span>
