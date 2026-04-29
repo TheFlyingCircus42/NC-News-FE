@@ -6,7 +6,7 @@ function Footer() {
       <div className="footer-inner">
 
 
-        <div className="footer-left">
+        <div className="footer-gooter-left">
           <p className="footer-name">Robert Hawkins</p>
           
           <p className="footer-meta">
@@ -20,7 +20,7 @@ function Footer() {
           </div>
         </div>
 
-        <div className="footer-right">
+        <div className="footer-footer-right">
           {/* <p className="footer-meta footer-stack-text">
             React · Node.js · Express · PostgreSQL · REST API
           </p> */}
