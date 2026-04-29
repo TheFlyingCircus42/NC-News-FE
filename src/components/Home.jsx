@@ -56,7 +56,8 @@ function Home (){
                 
                 <div className='home-trending-row'>
                     {trending.map((article, i)=>(
-                        <div className={`trending-card ${i === 0 || i === trending.length -1 ? "featured" : ""}`}>
+                        <div className={`trending-card ${i === 0 || i === trending.length -1 ? "featured" : ""}`}
+                        key={article.article_id}>
                             <ArticleCard article={article}/>
                         </div>
                     ))}
