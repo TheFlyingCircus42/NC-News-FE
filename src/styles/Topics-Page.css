@@ -1,0 +1,39 @@
+.section-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6b7280;
+  margin-bottom: 0.6rem;
+}
+.topic-feature-card {
+  position: relative;
+  display: block;
+  height: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.topic-feature-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.topic-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.1)
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+}
+
+.topic-overlay h3 {
+  color: white;
+  margin: 0;
+}
