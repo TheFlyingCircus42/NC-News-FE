@@ -1,5 +1,5 @@
 .section-title {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -42,4 +42,18 @@
 .topic-overlay h3 {
   color: white;
   margin: 0;
+}
+
+.single-topic-container
+{
+  max-width: 1000px;
+  margin: 1rem;
+  padding: 0 1rem;
+}
+
+.topic-description {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+  max-width: 600px;
 }
