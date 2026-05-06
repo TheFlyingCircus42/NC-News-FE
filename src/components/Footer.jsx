@@ -25,7 +25,7 @@ function Footer() {
             React · Node.js · Express · PostgreSQL · REST API
           </p> */}
            <p className="footer-meta footer-stack-text">
-            NC News is a fullstsack create, write, update, delete demo app. 
+            NC News is a fullstsack create, read, update, delete demo app. 
            </p>
 
           <div className="tech-stack">
