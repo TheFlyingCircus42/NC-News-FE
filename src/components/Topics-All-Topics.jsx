@@ -34,12 +34,13 @@ function TopicsAllTopics()
                     return(
                         <section key={topic} className="topic-section">
                             
-                            <Link
-                            to={`/topics/${topic}`}>
+
                             <h2 className="section-title">
-                                {topic.toUpperCase()}
+                                <Link
+                                to={`/topics/${topic}`}>
+                                {topic.toUpperCase()}</Link>
                             </h2>
-                            </Link>
+
 
                             <Link
                                 to={`/articles/${article.article_id}`}
