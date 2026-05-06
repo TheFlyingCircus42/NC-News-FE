@@ -5,9 +5,14 @@ function TopicsFootball () {
     const topic = "football"
 
     return(<>
-    <h3>FOOTBALL!</h3>
-    <p>If you like kicking balls really far, or reading about people kicking balls really far - then this is the place for you!</p>
+            <div className="single-topic-container">
+    <h3 className="section-title"> FOOTBALL! </h3>
+    <p className="topic-description"> If you like kicking balls really far, or reading about people kicking balls really far - then this is the place for you! </p>
+     </div>
     
+
+
+
     <ArticlesByTopic topic={topic}></ArticlesByTopic>
     
     </>)
