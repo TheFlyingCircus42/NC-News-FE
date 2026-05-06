@@ -6,8 +6,11 @@ function TopicsCooking ()
     const topic = "cooking"
 
     return(<>
-    <h3>Cooking</h3>
-    <p> Food just wouldn't be the same without it!</p>
+        <div className="single-topic-container">
+    <h3 className="section-title"> Cooking </h3>
+    <p className="topic-description"> Food just wouldn't be the same without it </p>
+     </div>
+
 
         <ArticlesByTopic topic={topic}></ArticlesByTopic>
 
