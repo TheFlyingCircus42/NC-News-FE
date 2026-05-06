@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import fetchAllArticles from "../api-fetchers/fetchAllArticles"
 import { Link } from "react-router-dom"
+import '../styles/Topics-Page.css'
 
 function TopicsAllTopics()
 {
@@ -32,9 +33,13 @@ function TopicsAllTopics()
 
                     return(
                         <section key={topic} className="topic-section">
+                            
+                            <Link
+                            to={`/topics/${topic}`}>
                             <h2 className="section-title">
                                 {topic.toUpperCase()}
                             </h2>
+                            </Link>
 
                             <Link
                                 to={`/articles/${article.article_id}`}
