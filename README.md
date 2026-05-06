@@ -1,20 +1,79 @@
-NC NEWS FE READ ME.
+# 📰 NC News – Frontend
+
+A responsive news web application built with React, allowing users to browse articles, vote, and interact with comments.
+
+Originally developed during the Northcoders bootcamp, this project is actively maintained and extended as a full-stack portfolio piece.
+
+---
+
+## 🌐 Live Site
+
+- https://ncnews-rh.netlify.app
+
+---
+
+## 🔗 Repositories
+
+- Frontend: https://github.com/TheFlyingCircus42/NC-News-FE  
+- Backend/API: https://github.com/TheFlyingCircus42/NC-News-BackEnd  
+
+---
+
+## 🚀 Features
+
+- View articles by topic
+- Vote on articles and comments
+- Add and delete comments
+- Optimistic UI updates for voting and posting
+- Responsive design for mobile and desktop
+- Dynamic homepage (featured + trending articles)
+
+---
+
+## 🧱 Tech Stack (Frontend)
+
+- React (Vite)
+- JavaScript (ES6+)
+- CSS (custom styling)
+- Axios (API requests)
+- Netlify (deployment & CI/CD)
+
+---
+
+## ⚙️ Backend / API
+
+- PostgreSQL database (Supabase)
+- Node.js + Express
+- RESTful API
+- Hosted on Render
+- Tested with Jest & Supertest
+
+---
+
+## 💻 Local Setup
+
+Clone the repo and install dependencies:
+
+```bash
+git clone https://github.com/TheFlyingCircus42/NC-News-FE.git
+cd NC-News-FE
+npm install
+npm run dev
+
+Vite runs site locally at:  http://localhost:5173/
+
+---
+
+## 🛣️ Roadmap
+
+Ongoing improvements include:
+
+- User authentication (login & profiles)
+- Sorting and pagination
+- Posting new articles
+- Refactoring and performance improvements
+- Migrating to TypeScript
+- Expanding dataset and reseeding database
 
 
-
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+If you have any feedback or suggestions please feel free to get in touch. rob.hawkins.89@gmail.com
