@@ -54,11 +54,10 @@ Originally developed during the Northcoders bootcamp, this project is actively m
 
 Clone the repo and install dependencies:
 
-```bash
-git clone https://github.com/TheFlyingCircus42/NC-News-FE.git
-cd NC-News-FE
-npm install
-npm run dev
+- git clone https://github.com/TheFlyingCircus42/NC-News-FE.git
+- cd NC-News-FE
+- npm install
+- npm run dev
 
 Vite runs site locally at:  http://localhost:5173/
 
